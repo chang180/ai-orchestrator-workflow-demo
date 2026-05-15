@@ -28,18 +28,23 @@
 
 ### Phase B — Slack 與 Bot Roster
 
-- [ ] 在 `#ai-orchestrator-workflow-demo` `/invite` 關鍵 bot
+- [x] 在 `#ai-orchestrator-workflow-demo` `/invite` 關鍵 bot（Claude、Cursor、Codex、GitHub）
 - [x] `docs/agent-roster.md` 清查與維護
-- [ ] `@Cursor settings` 設 default repo：`chang180/ai-orchestrator-workflow-demo`
-- [ ] Cloud Agents routing：`orchestrator` / `workflow` → 本 repo
+- [ ] `@Cursor settings` 設 default repo：`chang180/ai-orchestrator-workflow-demo`（**需你在 Slack 執行**）
+- [ ] Cloud Agents routing：`orchestrator` / `workflow` → 本 repo（**需你在 Dashboard 設定**）
 
 ### Phase C — 端到端演練
 
-- [ ] Slack thread 需求 → `gh issue` → branch → `docs/progress.md` → Slack 回報
+- [x] Slack thread 需求 → `gh issue` → branch → `docs/progress.md` → Slack 回報（issue #1）
 
 ### Phase D — Workflow Builder 入口
 
-- [ ] 手動建立 `/demo-project` shortcut（見 [workflow-builder-checklist.md](workflow-builder-checklist.md)）
+- [ ] 手動建立 `/demo-project` shortcut（見 [workflow-builder-checklist.md](workflow-builder-checklist.md)）（**需你在 Slack 執行**）
+
+### 合併與收尾（建議）
+
+- [ ] 開 PR：`feature/bootstrap-orchestrator` → `main`
+- [ ] 合併後關閉 issue #1
 
 ### Phase F — Cursor Agent Skill（可攜帶至下一專案）
 
