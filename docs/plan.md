@@ -15,7 +15,7 @@
 | GitHub | Issue、branch、PR、`docs/progress.md` | Source of truth |
 | Claude 等 bot | 可選協作 | 依 [agent-roster.md](agent-roster.md) `@mention` |
 
-**Codex 已移出本專案**（無法穩定控制 Slack 頻道）。
+**Codex** 納入預設分派（executor）；主控仍為 Cursor。
 
 ## 里程碑
 

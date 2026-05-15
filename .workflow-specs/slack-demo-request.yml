@@ -46,6 +46,13 @@ steps:
       roles:
         - orchestrator
         - reviewer
+        - executor
+        - integration
+      agents:
+        - cursor
+        - claude
+        - codex
+        - github
 
   - id: update_progress
     action: github.file.update

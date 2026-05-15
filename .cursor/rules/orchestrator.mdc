@@ -15,7 +15,7 @@ alwaysApply: true
 2. 更新 GitHub（issue、branch、`docs/progress.md`）。
 3. 回 Slack thread 回報（含 issue/branch 連結）。
 4. 依 `docs/agent-roster.md` mention 協作 bot；頻道成員掃描須 `include_bots: true`。
-5. Codex 為 legacy_optional：預設 workflow 不 @，除非使用者明確指定。
+5. 預設分派依 `docs/agent-roster.md`：Claude、Codex、GitHub 與 Cursor Cloud 一併 @（Codex 為 executor，非主控）。
 
 ## 禁止假設
 

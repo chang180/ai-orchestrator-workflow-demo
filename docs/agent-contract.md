@@ -53,8 +53,8 @@
 
 1. 從 [agent-roster.md](agent-roster.md) 解析 `mention` 與 `role`。
 2. 僅 mention `channel_status: joined` 的 bot；否則在 thread 註明需 `/invite`。
-3. **Codex**（`U0B411CESCR`）已於專案頻道，但為 `legacy_optional`：預設編排不 @，僅在使用者明確要求時調用。
-4. 訊息需含：issue 連結、branch 名、下一步、負責 role。
+3. 預設分派依 [agent-roster.md](agent-roster.md) **預設分派名單**：Claude（審閱）、Codex（實作）、GitHub（交付）；Codex 為 `executor`，非 orchestrator。
+4. 訊息需含：issue 連結、branch 名、下一步、各 role 負責項。
 
 範例：
 
@@ -62,7 +62,7 @@
 **編排更新**（Cursor）
 - Issue: https://github.com/chang180/ai-orchestrator-workflow-demo/issues/N
 - Branch: `feature/bootstrap`
-- 請 <@U0B404P284S> 協助審閱規格（若已在頻道）
+- 請 <@U0B404P284S> 審閱規格、<@U0B411CESCR> 負責實作、<@U0B3VUN3QA1> 同步 PR thread
 ```
 
 ## GitHub 寫入規則

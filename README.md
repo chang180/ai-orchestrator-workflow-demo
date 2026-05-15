@@ -6,9 +6,9 @@
 - **ChatGPT** — 規劃顧問（發想、PRD；不直接執行）
 - **Slack** — workflow 入口、thread、通知與 audit log
 - **GitHub** — repo、issue、branch、PR 與交付紀錄（`docs/progress.md`）
-- **Claude 等 bot** — 可選協作，依 [docs/agent-roster.md](docs/agent-roster.md) 調用
+- **Claude / Codex / GitHub bot** — 由 Cursor 依 [docs/agent-roster.md](docs/agent-roster.md) **預設分派**（審閱、實作、交付連動）
 
-> **Codex 已移出**：無法穩定控制 Slack 頻道，不再列為 workflow agent。
+> **主控**：Cursor 編排；Codex 等為分派名單中的 executor，非 orchestrator。
 
 ## Demo Goal
 
