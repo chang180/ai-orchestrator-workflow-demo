@@ -21,6 +21,7 @@
 - [ ] Phase B：`@Cursor settings` default repo（需人工，見 Charter）
 - [x] Phase C：E2E 演練（issue #1、branch、本檔更新）
 - [ ] Phase D：Workflow Builder `/demo-project`（需人工，見 runbook）
+- [x] Phase F：Cursor Agent Skill（`.cursor/skills/ai-orchestrator/`）
 
 ## 日誌
 
@@ -31,3 +32,4 @@
 - GitHub：issue #1、`feature/bootstrap-orchestrator` branch。
 - 頻道 bot 已齊（復掃 2026-05-15）：Claude、Cursor、Codex、GitHub；roster 已更新。
 - 待人工：`@Cursor settings`、Workflow Builder shortcut。
+- Phase F：已產出可攜帶 skill，供下一個正式 AI 專案複用。

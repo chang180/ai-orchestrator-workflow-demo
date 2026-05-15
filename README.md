@@ -48,9 +48,17 @@ docs/
   progress.md
   workflow-builder-checklist.md
 
-.cursor/rules/
-  orchestrator.mdc
+.cursor/
+  rules/orchestrator.mdc
+  skills/ai-orchestrator/     # 可複製至下一個 AI 專案的 Agent Skill
+    SKILL.md
+    INSTALL.md
+    new-project-bootstrap.md
 ```
+
+## 帶到下一個專案
+
+複製 [`.cursor/skills/ai-orchestrator/`](.cursor/skills/ai-orchestrator/) 至新 repo 的 `.cursor/skills/`，或至 `~/.cursor/skills/` 全域使用。詳見 [INSTALL.md](.cursor/skills/ai-orchestrator/INSTALL.md)。
 
 ## 快速開始
 

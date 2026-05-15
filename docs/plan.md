@@ -41,6 +41,15 @@
 
 - [ ] 手動建立 `/demo-project` shortcut（見 [workflow-builder-checklist.md](workflow-builder-checklist.md)）
 
+### Phase F — Cursor Agent Skill（可攜帶至下一專案）
+
+- [x] `.cursor/skills/ai-orchestrator/SKILL.md` — 主 skill
+- [x] `new-project-bootstrap.md` — 新專案啟用清單
+- [x] `reference-slack-limits.md` — 能力邊界精簡
+- [x] `INSTALL.md` — 複製至新 repo 或 `~/.cursor/skills/`
+
+**用途**：將本 demo 的編排模式帶入下一個正式 AI 開發專案，無需重讀全部 docs。
+
 ### Phase E — 進階（後續）
 
 - Cursor SDK 排程腳本
@@ -62,4 +71,5 @@
 
 ## 成功標準
 
-見計畫 Definition of Done：Cursor 主執行文件齊全、E2E 演練完成、roster 與 capability matrix 可查。
+- Cursor 主執行文件齊全、E2E 演練完成、roster 與 capability matrix 可查
+- **Agent Skill 可複製**：見 [.cursor/skills/ai-orchestrator/INSTALL.md](../.cursor/skills/ai-orchestrator/INSTALL.md)
