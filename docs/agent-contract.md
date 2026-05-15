@@ -53,7 +53,8 @@
 
 1. 從 [agent-roster.md](agent-roster.md) 解析 `mention` 與 `role`。
 2. 僅 mention `channel_status: joined` 的 bot；否則在 thread 註明需 `/invite`。
-3. 訊息需含：issue 連結、branch 名、下一步、負責 role。
+3. **Codex**（`U0B411CESCR`）已於專案頻道，但為 `legacy_optional`：預設編排不 @，僅在使用者明確要求時調用。
+4. 訊息需含：issue 連結、branch 名、下一步、負責 role。
 
 範例：
 

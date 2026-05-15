@@ -14,7 +14,8 @@ alwaysApply: true
 1. 讀 Slack thread / 頻道需求（Slack MCP）。
 2. 更新 GitHub（issue、branch、`docs/progress.md`）。
 3. 回 Slack thread 回報（含 issue/branch 連結）。
-4. 依 `docs/agent-roster.md` mention 協作 bot；未在頻道者提示 `/invite`。
+4. 依 `docs/agent-roster.md` mention 協作 bot；頻道成員掃描須 `include_bots: true`。
+5. Codex 為 legacy_optional：預設 workflow 不 @，除非使用者明確指定。
 
 ## 禁止假設
 
