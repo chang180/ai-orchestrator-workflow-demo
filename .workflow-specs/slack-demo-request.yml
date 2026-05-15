@@ -1,0 +1,42 @@
+name: slack-demo-request
+version: 0.1.0
+
+metadata:
+  owner: chang180
+  orchestrator: chatgpt
+  transport: slack
+  repository: ai-orchestrator-workflow-demo
+
+trigger:
+  type: manual
+  source: slack_shortcut
+  command: /demo-project
+
+steps:
+  - id: create_issue
+    action: github.issue.create
+    input:
+      title: "Bootstrap AI workflow demo"
+
+  - id: create_branch
+    action: github.branch.create
+    input:
+      name: feature/bootstrap
+
+  - id: assign_agents
+    action: slack.thread.message
+    input:
+      agents:
+        - cursor
+        - codex
+        - claude
+
+  - id: update_progress
+    action: github.file.update
+    input:
+      path: docs/progress.md
+
+outputs:
+  - slack_thread
+  - github_issue
+  - github_pull_request
