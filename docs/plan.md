@@ -13,9 +13,9 @@
 | Cursor Cloud | Slack 內 `@Cursor` 觸發的遠端分身 | Cloud Agent |
 | Slack Workflow | 排程、表單、shortcut 入口 | Workflow Builder（人工建立） |
 | GitHub | Issue、branch、PR、`docs/progress.md` | Source of truth |
-| Claude 等 bot | 可選協作 | 依 [agent-roster.md](agent-roster.md) `@mention` |
-
-**Codex** 納入預設分派（executor）；主控仍為 Cursor。
+| Claude | 審閱（reviewer） | 預設分派 |
+| Codex | 實作（executor） | 預設分派 |
+| GitHub bot | 交付連動（integration） | 預設分派 |
 
 ## 里程碑
 
