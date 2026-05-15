@@ -53,6 +53,9 @@ steps:
         - claude
         - codex
         - github
+      on_demand:
+        - github_copilot  # mention: @GitHub Copilot
+        - cursor_cloud    # mention: @Cursor
 
   - id: update_progress
     action: github.file.update

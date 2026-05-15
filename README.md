@@ -6,9 +6,10 @@
 - **ChatGPT** — 規劃顧問（發想、PRD；不直接執行）
 - **Slack** — workflow 入口、thread、通知與 audit log
 - **GitHub** — repo、issue、branch、PR 與交付紀錄（`docs/progress.md`）
-- **Claude / Codex / GitHub bot** — 由 Cursor 依 [docs/agent-roster.md](docs/agent-roster.md) **預設分派**（審閱、實作、交付連動）
+- **Claude / Codex / GitHub bot** — 預設分派（審閱、實作、交付連動）
+- **GitHub Copilot** — 按需 `@GitHub Copilot`（Slack 內 AI 寫 code / 開 PR；需 Copilot 訂閱）
 
-> **主控**：Cursor 編排；Codex 等為分派名單中的 executor，非 orchestrator。
+> **主控**：Cursor 編排 repo（`gh`、`docs/progress.md`）；Copilot / Codex 為可調用的 AI executor。
 
 ## Demo Goal
 

@@ -16,6 +16,7 @@ flowchart TB
   subgraph orchestration [Orchestration]
     CursorIDE["Cursor IDE Agent\nSlack MCP + gh"]
     CursorCloud["@Cursor Cloud Agent"]
+    GitHubCopilot["@GitHub Copilot\non_demand"]
   end
 
   subgraph truth [Source_of_Truth]
@@ -26,8 +27,10 @@ flowchart TB
   SlackWF --> SlackCh
   SlackCh --> CursorIDE
   SlackCh --> CursorCloud
+  SlackCh --> GitHubCopilot
   CursorIDE --> GitHub
   CursorCloud --> GitHub
+  GitHubCopilot --> GitHub
   CursorIDE --> SlackCh
   CursorCloud --> SlackCh
 ```
@@ -47,7 +50,20 @@ flowchart TB
 - **適用**：較重的實作、需隔離環境的 coding。
 - **設定**：[Cursor Slack 整合](https://cursor.com/docs/integrations/slack)、[Cloud Agents](https://cursor.com/docs/cloud-agent)。
 
-### 3. Slack Workflow Builder（僅入口）
+### 3. @GitHub Copilot（按需 AI 實作）
+
+- **觸發**：Cursor 在 thread 內 `@GitHub Copilot` + prompt（需 Copilot 訂閱）。
+- **工具**：Copilot cloud agent；讀整串 thread、寫 code、開 PR、issue 草稿。
+- **適用**：希望留在 GitHub 生態的 Slack 內實作；與 `@Cursor` 擇一。
+- **不做**：取代 Cursor 對 repo 的編排與 `docs/progress.md` 主控。
+- **參考**：[Copilot cloud agent + Slack](https://docs.github.com/copilot/how-tos/use-copilot-agents/coding-agent/integrate-coding-agent-with-slack)
+
+### 4. @github（整合，非 Copilot）
+
+- **觸發**：`<@U0B3VUN3QA1>` 或 `/github subscribe|open|close`。
+- **適用**：通知、輕量 issue 操作、**既有 PR** 的 thread 脈絡同步。
+
+### 5. Slack Workflow Builder（僅入口）
 
 - **觸發**：shortcut `/demo-project`、排程、表單。
 - **不做**：主控邏輯、GitHub 操作（由 Cursor 接手）。
@@ -66,8 +82,10 @@ flowchart TB
 | 情境 | Primary | Cloud |
 |------|---------|-------|
 | 編排、進度、issue 建立 | IDE Agent | — |
-| 大型 refactor、多檔實作 | 可委派 | `@Cursor` |
-| 同一 thread 已有 Cloud Agent | 用 follow-up 或明確指定 | 延續該 agent |
+| 大型 refactor、多檔實作（Cursor 生態） | 可委派 | `@Cursor` |
+| 大型 refactor（GitHub 生態） | 可委派 | `@GitHub Copilot` |
+| PR 建立後 thread 同步 | IDE 協調 | `<@U0B3VUN3QA1>` |
+| 同一 thread 已有 Cloud Agent | follow-up 或擇一 | 勿同時 @ Cursor + Copilot 實作 |
 
 契約詳見 [agent-contract.md](agent-contract.md)。
 

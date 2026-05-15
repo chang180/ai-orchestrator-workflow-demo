@@ -21,6 +21,8 @@
 | **從 repo YAML 部署 Workflow Builder** | **No** | **No** | **Yes** / Deno SDK+CLI |
 | Workflow Builder shortcut | — | — | Yes |
 | 觸發 Cloud Agent | — | `@Cursor` | 安裝整合 |
+| 觸發 GitHub Copilot agent | — | — | `@GitHub Copilot`（同一 GitHub App） |
+| `/github open` 開 issue | 否 | 否 | `@github` slash |
 
 ## Slack MCP 可用工具（本 workspace）
 
