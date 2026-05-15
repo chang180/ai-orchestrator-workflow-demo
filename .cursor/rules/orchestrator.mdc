@@ -1,0 +1,29 @@
+---
+description: Cursor 作為本 repo 的 AI orchestrator 時的編排規則
+globs:
+  - "**/*"
+alwaysApply: true
+---
+
+# Orchestrator Rules
+
+本專案中 **Cursor 為主執行 orchestrator**；ChatGPT 僅顧問。
+
+## 執行優先順序
+
+1. 讀 Slack thread / 頻道需求（Slack MCP）。
+2. 更新 GitHub（issue、branch、`docs/progress.md`）。
+3. 回 Slack thread 回報（含 issue/branch 連結）。
+4. 依 `docs/agent-roster.md` mention 協作 bot；未在頻道者提示 `/invite`。
+
+## 禁止假設
+
+- Repo workflow YAML 會自動部署到 Slack Workflow Builder。
+- MCP 可邀請 bot 進頻道或列出 workspace 全部已安裝 app。
+- MCP 可管理 Slack 側邊欄「頻道區段」。
+
+## 契約檔
+
+- `docs/agent-contract.md`
+- `docs/slack-capability-matrix.md`
+- `.workflow-specs/slack-demo-request.yml`

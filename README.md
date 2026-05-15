@@ -1,35 +1,63 @@
 # AI Orchestrator Workflow Demo
 
-這個 repo 用來示範一個 AI-first 專案工作流：
+這個 repo 示範 **Cursor 主執行** 的 AI-first 專案工作流：
 
-- ChatGPT 作為 AI Orchestrator / 中控台
-- Slack 作為 workflow 入口、thread、通知與 audit log
-- GitHub 作為 repo、issue、branch、PR 與交付紀錄
-- Cursor / Claude / Codex / Copilot 作為可被分派的 AI agent
+- **Cursor** — 主執行 orchestrator（IDE Agent + Slack MCP + GitHub）
+- **ChatGPT** — 規劃顧問（發想、PRD；不直接執行）
+- **Slack** — workflow 入口、thread、通知與 audit log
+- **GitHub** — repo、issue、branch、PR 與交付紀錄（`docs/progress.md`）
+- **Claude 等 bot** — 可選協作，依 [docs/agent-roster.md](docs/agent-roster.md) 調用
+
+> **Codex 已移出**：無法穩定控制 Slack 頻道，不再列為 workflow agent。
 
 ## Demo Goal
 
-驗證從 ChatGPT 專案發想開始，到 Slack workflow 承接需求，再到 GitHub 建立工作項目與交付檔案的流程。
+驗證從規劃（可經 ChatGPT）到 Slack 承接需求，再由 **Cursor** 建立 GitHub 工作項、更新進度並回報 thread 的流程。
 
 ## Important Finding
 
-Slack Workflow Builder 目前不等同於 GitHub Actions：不能單純把 workflow YAML 放進 repo 後，就由 Slack 自動掃描並建立 workflow。
+Slack Workflow Builder **不等同** GitHub Actions：repo 內 YAML 是 **contract**，不會被 Slack 自動掃描部署。
 
-比較可行的模式是：
+可行模式：
 
-1. 把 workflow spec 放在 repo，作為可版本控管的 contract。
-2. 人工或 AI agent 依照 spec 在 Slack Workflow Builder 建立流程。
-3. 進階版再用 Slack App / Slack CLI / external webhook trigger 讓流程可部署、觸發或同步。
+1. 把 workflow spec 放在 `.workflow-specs/`，版本控管。
+2. 依 [slack-demo-request.md](.workflow-specs/slack-demo-request.md) **人工**在 Workflow Builder 建立入口。
+3. **執行與編排由 Cursor 負責**（Slack MCP + `gh`）；`@Cursor` Cloud Agent 可從 Slack 觸發重型實作。
+
+部分 Slack UI 功能 **無公開 API**（例如側邊欄頻道區段、列出全部已安裝 App、邀請 bot 進既有頻道）— 見 [docs/slack-capability-matrix.md](docs/slack-capability-matrix.md)。
+
+## Slack 頻道
+
+- `#ai-orchestrator-workflow-demo` — 專案專用（ID: `C0B40L36REE`）
+- 設定：執行 `@Cursor settings` 設 default repo 為本 repo（見 runbook）
 
 ## Repository Layout
 
 ```text
 .workflow-specs/
-  slack-demo-request.yml
-  slack-demo-request.md
+  slack-demo-request.yml      # 機器契約 v0.2
+  slack-demo-request.md       # 人類 runbook
 
 docs/
   plan.md
-  progress.md
+  architecture.md
   agent-contract.md
+  agent-roster.md
+  slack-capability-matrix.md
+  progress.md
+
+.cursor/rules/
+  orchestrator.mdc
 ```
+
+## 快速開始
+
+1. 閱讀 [docs/plan.md](docs/plan.md) 與 [docs/architecture.md](docs/architecture.md)
+2. 完成 [runbook Phase B](.workflow-specs/slack-demo-request.md)（`/invite` bot、`@Cursor settings`）
+3. 在 Cursor 中請 agent 執行 Phase C 端到端演練
+
+## 參考
+
+- [Cursor Slack 整合](https://cursor.com/docs/integrations/slack)
+- [Cursor Cloud Agents](https://cursor.com/docs/cloud-agent)
+- [Slack Workflows](https://docs.slack.dev/workflows)
