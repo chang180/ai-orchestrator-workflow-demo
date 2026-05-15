@@ -38,7 +38,7 @@
 
 ### Phase D — Workflow Builder 入口
 
-- [ ] 手動建立 `/demo-project` shortcut（見 runbook）
+- [ ] 手動建立 `/demo-project` shortcut（見 [workflow-builder-checklist.md](workflow-builder-checklist.md)）
 
 ### Phase E — 進階（後續）
 

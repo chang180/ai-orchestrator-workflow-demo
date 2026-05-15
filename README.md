@@ -45,6 +45,7 @@ docs/
   agent-roster.md
   slack-capability-matrix.md
   progress.md
+  workflow-builder-checklist.md
 
 .cursor/rules/
   orchestrator.mdc
