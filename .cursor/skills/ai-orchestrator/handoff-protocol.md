@@ -1,6 +1,6 @@
 # Handoff 協定（Skill 精簡版）
 
-> 完整版：`docs/agent-handoff/PROTOCOL-v3.md` · 實測：`docs/agent-handoff/TEST-RESULTS.md`
+> 完整版：bootstrap 後的 `docs/agent-handoff/PROTOCOL-v3.md`（模板在 `templates/docs/agent-handoff/PROTOCOL-v3.md`）
 
 ## 三種訊息（勿混淆）
 

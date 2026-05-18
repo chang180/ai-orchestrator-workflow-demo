@@ -1,55 +1,54 @@
-# 安裝與複用
+# 安裝：只複製 Skills
 
-## 專案內使用（推薦給正式 AI 開發 repo）
+> **總覽**：[../README.md](../README.md) — 複製整個 `.cursor/skills/` 即可。
 
-1. 複製目錄：
+其他專案（如 **l12cv**）**只需**複製 skills；`rules` 與 `docs` 由 Agent 在目標 repo **bootstrap 產生**。
 
-   ```bash
-   cp -R .cursor/skills/ai-orchestrator /path/to/your-project/.cursor/skills/
-   # 可選：Slack 工作區治理（頻道分層、charter）
-   cp -R .cursor/skills/slack-orchestrator /path/to/your-project/.cursor/skills/
-   ```
-
-2. 可選：複製並改寫規則
-
-   ```bash
-   cp .cursor/rules/orchestrator.mdc /path/to/your-project/.cursor/rules/
-   ```
-
-3. 依 [new-project-bootstrap.md](new-project-bootstrap.md) 建立 `docs/`、`.workflow-specs/`、填 roster。
-
-4. 在新專案對 Cursor 說：
-
-   > 請依 ai-orchestrator skill 幫我 bootstrap 這個 repo 的 Slack + GitHub 工作流。
-
-## 全域使用（所有專案）
+## 1. 複製（必做）
 
 ```bash
-cp -R .cursor/skills/ai-orchestrator ~/.cursor/skills/
+cp -R /path/to/ai-orchestrator-workflow-demo/.cursor/skills /path/to/your-project/.cursor/
 ```
 
-Agent 在任一 workspace 皆可被觸發（description 關鍵字：orchestrator、Slack MCP、agent roster）。
+**不要複製**：`docs/`、`.cursor/rules/`、`.worktrees/`（demo 專用或將由 bootstrap 產生）。
 
-## 與本 demo repo 的關係
+## 2. Bootstrap（在目標 repo 對 Cursor 說）
 
-| 內容 | 位置 |
+```text
+請依 ai-orchestrator skill 的 bootstrap.md，為本 repo 建立 orchestrator rules 與 docs。
+Slack 產品頻道：#10-proj-l12cv（請用 MCP 查 channel_id）。
+```
+
+Agent 會：
+
+1. 讀 `.cursor/skills/ai-orchestrator/templates/manifest.json`
+2. 替換 `{{GITHUB_*}}`、`{{SLACK_*}}` 變數
+3. 寫入 `.cursor/rules/orchestrator.mdc` 與 `docs/**`
+4. 可選執行 `slack-orchestrator/bootstrap-workspace.md`
+
+## 3. 人工收尾
+
+- `/invite` bots、Pin charter、`@Cursor settings`、GitHub App login
+- 第一次 E2E：`[feature]` → push task → `[handoff]`
+
+## 本 demo repo 的定位
+
+| 內容 | 角色 |
 |------|------|
-| 可攜帶 skill（編排 + handoff） | `.cursor/skills/ai-orchestrator/` |
-| 可攜帶 skill（Slack 治理） | `.cursor/skills/slack-orchestrator/` |
-| 專案實例（真實 channel_id） | `docs/agent-roster.md`、`docs/slack-channel-taxonomy.md` |
-| 自動套用的專案規則 | `.cursor/rules/orchestrator.mdc` |
-
-正式專案：**skill 負責怎麼做；docs 負責這個專案的參數。**
-
-Handoff 定稿請一併複製或對照：
-
-- `handoff-protocol.md`（skill 內精簡版）
-- 目標 repo 的 `docs/agent-handoff/PROTOCOL-v3.md`（可由 demo 複製後改 channel_id）
+| `.cursor/skills/**` | **可攜帶原始碼**（唯一需要 copy 的） |
+| `docs/`、`.cursor/rules/` | **living demo 實例**（含 E2E 歷史，非必複製） |
+| `.workflow-specs/` | 可選；bootstrap 可產生 |
+| `.worktrees/` | 勿複製 |
 
 ## 更新 skill
 
-demo repo 改進 workflow 後，重新 `cp -R` 覆蓋目標專案的 skill 目錄，或 diff 合併：
+```bash
+cp -R "$DEMO/.cursor/skills/ai-orchestrator" "$TARGET/.cursor/skills/"
+# 已 bootstrap 的 docs 不會自動更新；重大協定變更時可重新 bootstrap 或手動 merge
+```
 
-- `SKILL.md`
-- `handoff-protocol.md`
-- `reference-slack-limits.md`
+## 全域安裝（可選）
+
+```bash
+cp -R "$DEMO/.cursor/skills/ai-orchestrator" ~/.cursor/skills/
+```

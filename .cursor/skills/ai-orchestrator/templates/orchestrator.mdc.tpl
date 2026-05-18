@@ -1,5 +1,5 @@
 ---
-description: Cursor 作為本 repo 的 AI orchestrator 時的編排規則（demo 實例；可由 ai-orchestrator skill bootstrap 重建）
+description: Cursor 作為本 repo 的 AI orchestrator 時的編排規則（由 ai-orchestrator skill bootstrap 產生）
 globs:
   - "**/*"
 alwaysApply: true
@@ -31,15 +31,16 @@ alwaysApply: true
 - 其他 AI 會自動排隊執行編排指令。
 - Contributors 出現「Claude/Codex」帳號（實為你的帳號或 bot）。
 
-## 契約檔
+## 契約檔（由 skill bootstrap 產生，可再執行 bootstrap 更新）
 
 - `docs/agent-contract.md`
 - `docs/agent-handoff/PROTOCOL-v3.md`
 - `docs/slack-capability-matrix.md`
-- `docs/slack-channel-taxonomy.md`（devstream-core 頻道）
 - `docs/slack-handoff-template.md`
+- `docs/agent-roster.md`
 
-## Slack workspace（devstream-core）
+## 本專案 Slack
 
-- **本 repo**：`#11-proj-ai-orchestrator-workflow-demo`（`C0B40L36REE`）· l12cv：`#10-proj-l12cv` · Agent 專線：`#20-agent-*`
-- Skill：`.cursor/skills/slack-orchestrator/`
+- **產品頻道**：`#{{SLACK_PROJECT_CHANNEL}}`（`{{SLACK_PROJECT_CHANNEL_ID}}`）
+- **Repo**：`{{GITHUB_FULL_REPO}}`
+- **Skill**：`.cursor/skills/ai-orchestrator/` · 工作區治理：`.cursor/skills/slack-orchestrator/`

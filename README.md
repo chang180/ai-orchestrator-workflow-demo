@@ -84,7 +84,13 @@ docs/
 
 ## 帶到下一個專案
 
-複製 [`.cursor/skills/ai-orchestrator/`](.cursor/skills/ai-orchestrator/)（必備）與可選 [`.cursor/skills/slack-orchestrator/`](.cursor/skills/slack-orchestrator/)（Slack 工作區治理）至新 repo。詳見 [INSTALL.md](.cursor/skills/ai-orchestrator/INSTALL.md)。
+**只需複製整個 `.cursor/skills/` 目錄** → 見 [.cursor/skills/README.md](.cursor/skills/README.md)
+
+```bash
+cp -R .cursor/skills /path/to/l12cv/.cursor/
+```
+
+在 l12cv 對 Cursor：**依 ai-orchestrator/bootstrap.md 初始化 rules 與 docs**。
 
 ## 快速開始
 
