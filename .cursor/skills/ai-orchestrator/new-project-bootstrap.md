@@ -47,7 +47,7 @@ your-project/
 - [ ] `slack_list_channel_members` + **`include_bots: true`** 驗證 roster
 - [ ] 發 Channel Charter（編排說明 + roster 連結）
 - [ ] `@Cursor settings` → default repo = `owner/repo`
-- [ ] `@GitHub Copilot` → login + default repo（若用 Copilot）
+- [ ] GitHub App DM／thread → login + default repo（Copilot 與 `/github` 共用）
 - [ ] Cloud Agents routing rules（可選）
 
 ## 4. GitHub 設定
@@ -84,8 +84,7 @@ on_demand: [github_copilot, cursor_cloud]
 | Cursor | orchestrator (cloud) | | @Cursor | |
 | Claude | reviewer | | | |
 | Codex | executor | | | |
-| GitHub | integration | | @github | |
-| GitHub Copilot | executor (on_demand) | | @GitHub Copilot | |
+| GitHub | integration + Copilot (on_demand) | U… | `<@U…>` / @github | |
 
 **填完後用 MCP 復掃驗證，勿只靠猜測。**
 
@@ -94,6 +93,6 @@ on_demand: [github_copilot, cursor_cloud]
 - [ ] Slack thread 貼需求
 - [ ] Cursor 建 issue + branch + 更新 progress
 - [ ] Slack thread 回報連結
-- [ ] （可選）按需 `@GitHub Copilot` 或 `@Cursor` 實作
+- [ ] （可選）按需 `<@github_user_id> In owner/repo, …` 或 `@Cursor` 實作
 
 完成後即可在正式專案以相同模式迭代。

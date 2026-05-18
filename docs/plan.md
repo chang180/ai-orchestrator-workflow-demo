@@ -16,7 +16,7 @@
 | Claude | 審閱（reviewer） | 預設分派 |
 | Codex | 實作（executor） | 預設分派 |
 | GitHub bot | 交付連動（integration） | 預設分派 |
-| GitHub Copilot | AI 實作（executor） | 按需 `@GitHub Copilot` |
+| GitHub Copilot agent | AI 實作（executor） | 按需 `<@U0B3VUN3QA1> In repo, …`（同一 `@github` App） |
 
 ## 里程碑
 

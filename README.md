@@ -7,7 +7,7 @@
 - **Slack** — workflow 入口、thread、通知與 audit log
 - **GitHub** — repo、issue、branch、PR 與交付紀錄（`docs/progress.md`）
 - **Claude / Codex / GitHub bot** — 預設分派（審閱、實作、交付連動）
-- **GitHub Copilot** — 按需 `@GitHub Copilot`（Slack 內 AI 寫 code / 開 PR；需 Copilot 訂閱）
+- **GitHub**（含 Copilot agent）— `@github` / `<@U0B3VUN3QA1>` + 任務（Slack 內非同步開 PR）；`/github` 訂閱通知
 
 > **主控**：Cursor 編排 repo（`gh`、`docs/progress.md`）；Copilot / Codex 為可調用的 AI executor。
 

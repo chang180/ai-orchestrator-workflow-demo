@@ -33,7 +33,7 @@
 
 ### 2026-05-15（收尾）
 
-- 使用者已完成：`@Cursor settings`、`@GitHub Copilot` login/default repo。
+- 使用者已完成：`@Cursor settings`、GitHub App login/default repo（Copilot 與 `/github` 共用）。
 - Cursor orchestrator：開 PR、Slack 頻道發布里程碑摘要。
 
 ### 2026-05-15（初版）

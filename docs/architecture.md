@@ -16,7 +16,7 @@ flowchart TB
   subgraph orchestration [Orchestration]
     CursorIDE["Cursor IDE Agent\nSlack MCP + gh"]
     CursorCloud["@Cursor Cloud Agent"]
-    GitHubCopilot["@GitHub Copilot\non_demand"]
+    GitHubApp["@github\nintegration + Copilot"]
   end
 
   subgraph truth [Source_of_Truth]
@@ -27,10 +27,10 @@ flowchart TB
   SlackWF --> SlackCh
   SlackCh --> CursorIDE
   SlackCh --> CursorCloud
-  SlackCh --> GitHubCopilot
+  SlackCh --> GitHubApp
   CursorIDE --> GitHub
   CursorCloud --> GitHub
-  GitHubCopilot --> GitHub
+  GitHubApp --> GitHub
   CursorIDE --> SlackCh
   CursorCloud --> SlackCh
 ```
@@ -50,20 +50,20 @@ flowchart TB
 - **適用**：較重的實作、需隔離環境的 coding。
 - **設定**：[Cursor Slack 整合](https://cursor.com/docs/integrations/slack)、[Cloud Agents](https://cursor.com/docs/cloud-agent)。
 
-### 3. @GitHub Copilot（按需 AI 實作）
+### 3. @github（GitHub App：整合 + Copilot agent）
 
-- **觸發**：Cursor 在 thread 內 `@GitHub Copilot` + prompt（需 Copilot 訂閱）。
-- **工具**：Copilot cloud agent；讀整串 thread、寫 code、開 PR、issue 草稿。
-- **適用**：希望留在 GitHub 生態的 Slack 內實作；與 `@Cursor` 擇一。
-- **不做**：取代 Cursor 對 repo 的編排與 `docs/progress.md` 主控。
-- **參考**：[Copilot cloud agent + Slack](https://docs.github.com/copilot/how-tos/use-copilot-agents/coding-agent/integrate-coding-agent-with-slack)
+同一 Slack bot（`U0B3VUN3QA1`），兩種觸發方式：
 
-### 4. @github（整合，非 Copilot）
+| 模式 | 觸發 | 用途 |
+|------|------|------|
+| 整合 | `/github subscribe|open|close` | 通知、issue、thread→既有 PR |
+| Copilot agent | `<@U0B3VUN3QA1> In owner/repo, …` | 非同步寫 code、開 PR（需 Copilot 訂閱） |
 
-- **觸發**：`<@U0B3VUN3QA1>` 或 `/github subscribe|open|close`。
-- **適用**：通知、輕量 issue 操作、**既有 PR** 的 thread 脈絡同步。
+- **適用**：GitHub 生態內 Slack 實作；與 `@Cursor` 擇一。
+- **不做**：取代 Cursor 編排與 `docs/progress.md` 主控。
+- **參考**：[Copilot + Slack](https://docs.github.com/copilot/how-tos/use-copilot-agents/coding-agent/integrate-coding-agent-with-slack)、[slack-bot-mention-tests.md](slack-bot-mention-tests.md)
 
-### 5. Slack Workflow Builder（僅入口）
+### 4. Slack Workflow Builder（僅入口）
 
 - **觸發**：shortcut `/demo-project`、排程、表單。
 - **不做**：主控邏輯、GitHub 操作（由 Cursor 接手）。
@@ -83,9 +83,9 @@ flowchart TB
 |------|---------|-------|
 | 編排、進度、issue 建立 | IDE Agent | — |
 | 大型 refactor、多檔實作（Cursor 生態） | 可委派 | `@Cursor` |
-| 大型 refactor（GitHub 生態） | 可委派 | `@GitHub Copilot` |
-| PR 建立後 thread 同步 | IDE 協調 | `<@U0B3VUN3QA1>` |
-| 同一 thread 已有 Cloud Agent | follow-up 或擇一 | 勿同時 @ Cursor + Copilot 實作 |
+| 大型 refactor（GitHub 生態） | 可委派 | `<@U0B3VUN3QA1> In repo, …` |
+| PR 通知訂閱 | IDE 提示 | `/github subscribe` |
+| 同一 thread 已有 Cloud Agent | follow-up 或擇一 | 勿同時 @ Cursor + GitHub Copilot 任務 |
 
 契約詳見 [agent-contract.md](agent-contract.md)。
 

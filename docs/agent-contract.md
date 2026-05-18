@@ -38,19 +38,22 @@
 - **觸發**：Cursor 在 thread 內 `@mention`（見 roster）。
 - **不可假設**：已安裝於 workspace 或已加入頻道——執行前查 roster 的 `channel_status`。
 
-### GitHub（integration，`@github`）
+### GitHub App（`@github` / `<@U0B3VUN3QA1>`）
 
-- **觸發**：`<@U0B3VUN3QA1>` 或 slash `/github ...`。
-- **可做**：訂閱 repo 通知、`/github open` 開 issue、關閉/重開 issue、將 **既有 PR** 的 thread 脈絡同步進 PR。
-- **不可做**：取代 Cursor 編排；不等同 Copilot；不能任意建立 branch / 直接改檔（請用 Cursor + `gh`）。
+Slack 內**只有一個** GitHub bot；整合與 Copilot coding agent 共用此 mention（見 [slack-bot-mention-tests.md](slack-bot-mention-tests.md)）。
 
-### GitHub Copilot（executor on_demand，`@GitHub Copilot`）
+**整合模式**（slash）
 
-- **觸發**：Cursor 在需要時於 thread 輸入 `@GitHub Copilot` + prompt（同一 GitHub Slack App，與 `@github` 不同 mention）。
-- **可做**：Copilot cloud agent——讀取整串 thread、寫 code、開 PR、建立 issue 草稿（需 Copilot 訂閱與 repo write）。
-- **分工**：Cursor 主控 repo 與進度；Copilot 負責 **委派出去的 AI 實作**；完成後由 Cursor 更新 `docs/progress.md` 並彙總。
-- **參考**：[Integrating Copilot cloud agent with Slack](https://docs.github.com/copilot/how-tos/use-copilot-agents/coding-agent/integrate-coding-agent-with-slack)
-- **與 @Cursor 關係**：同為 Slack 內 coding agent，同一任務擇一，避免重複開 PR。
+- **觸發**：`/github subscribe|open|close|help`…
+- **可做**：訂閱通知、開/關 issue、將 **既有 PR** 的 thread 脈絡同步進 PR。
+
+**Copilot coding agent 模式**（on_demand）
+
+- **觸發**：`<@U0B3VUN3QA1>` + 自然語言任務（例：`In owner/repo, …`）；**勿**用純文字 `@GitHub Copilot`（非 Slack mention）。
+- **可做**：讀整串 thread、非同步寫 code、開 PR、issue 草稿（需 Copilot 訂閱與 repo write）。
+- **分工**：Cursor 主控 repo 與 `docs/progress.md`；Copilot 負責委派出去的實作。
+- **參考**：[Copilot cloud agent + Slack](https://docs.github.com/copilot/how-tos/use-copilot-agents/coding-agent/integrate-coding-agent-with-slack)
+- **與 @Cursor**：同一任務擇一，避免重複開 PR。
 
 ## 步驟契約（對應 workflow spec）
 
@@ -70,7 +73,7 @@
 1. 從 [agent-roster.md](agent-roster.md) 解析 `mention` 與 `role`。
 2. 僅 mention `channel_status: joined` 的 bot；頻道內 **Claude/Codex/Copilot 須先完成 App 頻道綁 repo**（人工設定）。
 3. 使用 [slack-bot-mention-tests.md](slack-bot-mention-tests.md) 的 **invoke 模板**，勿只寫「請 Claude 審閱」。
-4. 預設 handoff：Claude、Codex、`<@U0B3VUN3QA1>`；**GitHub Copilot** 僅 `on_demand`。
+4. 預設 handoff：Claude、Codex；**GitHub Copilot 實作**僅 `on_demand`（`<@U0B3VUN3QA1>` + 任務）。
 5. 訊息需含：issue 連結、branch 名、下一步；Codex 可能仍會附帶開 task。
 
 範例：
@@ -79,8 +82,8 @@
 **編排更新**（Cursor）
 - Issue: https://github.com/chang180/ai-orchestrator-workflow-demo/issues/N
 - Branch: `feature/bootstrap`
-- 請 <@U0B404P284S> 審閱、<@U0B411CESCR> 實作；PR 建立後 <@U0B3VUN3QA1> 同步 thread
-- （若需 GitHub 生態實作）@GitHub Copilot In chang180/ai-orchestrator-workflow-demo, ...
+- 請 <@U0B404P284S> 審閱、<@U0B411CESCR> 實作
+- （若需 GitHub Copilot 實作）<@U0B3VUN3QA1> In chang180/ai-orchestrator-workflow-demo, …
 ```
 
 ## GitHub 寫入規則
