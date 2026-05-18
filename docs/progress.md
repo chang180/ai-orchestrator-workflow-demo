@@ -38,6 +38,11 @@
 
 ## 日誌
 
+### 2026-05-18（E2E v4 啟動）
+
+- Issue [#12](https://github.com/chang180/ai-orchestrator-workflow-demo/issues/12)；branch `test/e2e-v4-11-proj` 已 push。
+- Slack [feature + T1 handoff](https://devstream-core.slack.com/archives/C0B40L36REE/p1779081856795149) → 待 Claude `handoff-complete`。
+
 ### 2026-05-18（收尾）
 
 - 使用者 Slack 手動 @ 各 AI + repo 寫入測試；確認僅 IDE 可穩定主控。
