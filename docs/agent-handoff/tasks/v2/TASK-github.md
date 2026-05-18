@@ -34,6 +34,14 @@ completed_by: github-copilot at <ISO8601>
 <@U0B3VUN3QA1> In chang180/ai-orchestrator-workflow-demo, branch=test/agent-handoff-v2, read docs/agent-handoff/tasks/v2/TASK-github.md and open a PR. Do not merge.
 ```
 
-## 完成時
+## 完成回報（必做）
 
-Thread 回覆 **PR URL**。
+```text
+<@U09H5GMRSEQ> handoff-complete
+task: T3
+status: ready_for_review
+pr: <PR URL>
+artifact: docs/agent-handoff/artifacts/v2/github-deliverable.md
+```
+
+貼在 handoff **同一 thread**，並 `<@U09H5GMRSEQ>`。

@@ -11,6 +11,19 @@
 | @Cursor Cloud | **PR**（同上） | 同上 |
 | @github Copilot | **PR**（同上） | 同上 |
 
+## 觸發方式（勿空等 30–60 分鐘）
+
+Executor 完成後應在 handoff thread 發：
+
+```text
+<@U09H5GMRSEQ> handoff-complete
+task: T1
+status: ready_for_review
+pr: https://github.com/...
+```
+
+見 [COMPLETION-REPORT.md](COMPLETION-REPORT.md)。你在 IDE 看到 Slack 通知或使用者轉述後再複審即可。
+
 ## 複審流程（v2 實驗）
 
 ```bash

@@ -17,7 +17,7 @@
 
 ## 可行性結論（精簡）
 
-- **可行**：Cursor 編排 → GitHub branch + 任務文件 → Slack 分別 @ 各 executor（見 [docs/agent-handoff/](docs/agent-handoff/)）。
+- **可行**：Cursor 編排 → branch + 任務文件 → Slack handoff → **PR / Slack 審閱** → 編排者複審（見 [docs/agent-handoff/](docs/agent-handoff/)，目前 **v2**）。
 - **不可行**：Slack 一 @ 多 agent 自動協作；把本機 worktree 路徑交給雲端 bot。
 - **主控**：仍為 Cursor IDE + `gh`；其他 bot 為 handoff 專才。
 

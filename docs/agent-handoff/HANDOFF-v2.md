@@ -4,7 +4,7 @@
 **Repo**：`chang180/ai-orchestrator-workflow-demo`  
 **Branch**：`test/agent-handoff-v2`（PR **target 此 branch**，勿直接推 `main`）  
 **Issue**：https://github.com/chang180/ai-orchestrator-workflow-demo/issues/7  
-**Slack**：https://devstream-core.slack.com/archives/C0B40L36REE/p1779068753832629
+**Slack**：建立後寫入 `docs/progress.md`
 
 ## 與 v1 差異
 
@@ -39,9 +39,11 @@ status: ready_for_review
 
 4. PR 標題格式：`[handoff-v2][T1] <簡述>`
 5. PR 描述須連回 Slack thread URL（編排者會貼在 handoff 訊息）
+6. **完成後立刻** 於 **同一 thread** `@Cursor` 回報 → 見 [COMPLETION-REPORT.md](COMPLETION-REPORT.md)（**勿**讓編排者空等）
 
 ## 編排者驗收
 
+- [ ] 收到各任務 `handoff-complete` + `@Cursor`（或被動讀 thread）
 - [ ] 最多 3 個 open PR（T1–T3）+ Claude Slack 審閱
 - [ ] 執行 [ORCHESTRATOR-REVIEW.md](ORCHESTRATOR-REVIEW.md) 流程
 - [ ] 在 issue #7 留言彙總

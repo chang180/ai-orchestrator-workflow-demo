@@ -32,6 +32,14 @@ completed_by: cursor-cloud at <ISO8601>
 
 `@Cursor in chang180/ai-orchestrator-workflow-demo, branch=test/agent-handoff-v2, …`
 
-## 完成時
+## 完成回報（必做）
 
-Thread 回覆 **PR URL**。
+PR 就緒後於 **同一 thread** 貼（**僅回報，勿開新任務**）：
+
+```text
+<@U09H5GMRSEQ> handoff-complete
+task: T2
+status: ready_for_review
+pr: <PR URL>
+artifact: docs/agent-handoff/artifacts/v2/cursor-deliverable.md
+```

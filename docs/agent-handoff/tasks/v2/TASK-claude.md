@@ -32,3 +32,16 @@
 ## 完成標準
 
 `verdict` 欄位存在且 findings 至少 2 點。
+
+## 完成回報（必做）
+
+審閱貼完後 **再加一行**：
+
+```text
+<@U09H5GMRSEQ> handoff-complete
+task: T4
+status: ready_for_review
+pr: n/a
+artifact: n/a
+notes: verdict=<pass|needs_changes|blocked>
+```
