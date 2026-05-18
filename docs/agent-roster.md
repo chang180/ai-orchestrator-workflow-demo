@@ -44,9 +44,18 @@ Slack workspace 內可調用的 bot／整合角色。Cursor orchestrator 執行 
 
 - Claude `U0B404P284S` 亦曾於該頻道出現系統訊息
 
-## 預設分派名單（`notify_agents`）
+## 頻道設定前置（人工，v2 實測已驗證）
 
-依序 @mention（皆需 `channel_status: joined`）：
+完成後 Claude/Codex 才會對準 `chang180/ai-orchestrator-workflow-demo`：
+
+- Claude：頻道／workspace 內綁定本 repo（@ 後應顯示 `Working in chang180/ai-orchestrator-workflow-demo`）
+- Codex：environment 指向本 repo（@ 後 task 應在 `chang180/ai-orchestrator-workflow-demo`）
+- GitHub Copilot：`@GitHub Copilot` login + default repo + `In owner/repo` 句型
+- 實測紀錄：[slack-bot-mention-tests.md](slack-bot-mention-tests.md)
+
+## 預設 handoff 名單（`notify_agents`）
+
+依序 @mention + **明確一句指令**（皆需 `channel_status: joined`）：
 
 1. `<@U09H5GMRSEQ>` **Cursor** — 主執行／重型實作（或 IDE 已處理時略過重複 @）
 2. `<@U0B404P284S>` **Claude** — 規格審閱、風險與驗收檢視
@@ -95,3 +104,4 @@ Slack workspace 內可調用的 bot／整合角色。Cursor orchestrator 執行 
 | 2026-05-15 | 復掃：Claude、Cursor、Codex、GitHub 均已加入專案頻道 |
 | 2026-05-15 | Codex 納入預設分派名單（role: executor） |
 | 2026-05-15 | 拆分 GitHub（integration）與 GitHub Copilot（on_demand executor） |
+| 2026-05-18 | v2 @mention 實測：Claude/Codex 頻道設定後通過；見 slack-bot-mention-tests.md |

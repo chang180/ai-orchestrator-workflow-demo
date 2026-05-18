@@ -47,6 +47,7 @@ docs/
   slack-capability-matrix.md
   progress.md
   workflow-builder-checklist.md
+  slack-bot-mention-tests.md
 
 .cursor/
   rules/orchestrator.mdc

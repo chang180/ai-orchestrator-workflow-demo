@@ -40,6 +40,7 @@ steps:
 
   - id: notify_agents
     action: slack.thread.message
+    note: notify_handoff — 非自動 sub-agent 執行，見 docs/slack-bot-mention-tests.md
     executor: cursor
     input:
       mentions_from: docs/agent-roster.md
