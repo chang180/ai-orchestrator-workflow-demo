@@ -6,9 +6,10 @@
 
 | 欄位 | 值 |
 |------|-----|
-| **Phase** | C — 端到端演練 |
-| **狀態** | completed |
+| **Phase** | 收尾 — PR 合併 |
+| **狀態** | in_progress |
 | **Issue** | https://github.com/chang180/ai-orchestrator-workflow-demo/issues/1 |
+| **PR** | （建立後填入） |
 | **Branch** | `feature/bootstrap-orchestrator` |
 | **Slack thread** | https://devstream-core.slack.com/archives/C0B40L36REE/p1778838247636049 |
 | **最後更新** | 2026-05-15 |
@@ -16,20 +17,19 @@
 ## 里程碑
 
 - [x] Phase A：文件與 spec v0.2
-- [x] Phase B：agent-roster 初版清查、Channel Charter 已發布
-- [x] Phase B：`/invite` bot 至專案頻道（Claude、Cursor、Codex、GitHub）
-- [ ] Phase B：`@Cursor settings` default repo（需人工，見 Charter）
-- [x] Phase C：E2E 演練（issue #1、branch、本檔更新）
-- [ ] Phase D：Workflow Builder `/demo-project`（需人工，見 runbook）
-- [x] Phase F：Cursor Agent Skill（`.cursor/skills/ai-orchestrator/`）
+- [x] Phase B：bot invite、roster、@Cursor settings、Copilot 設定（使用者已完成）
+- [x] Phase C：E2E 演練
+- [ ] Phase D：Workflow Builder `/demo-project`（可選）
+- [x] Phase F：Agent Skill
+- [ ] PR 合併至 `main`、關閉 issue #1
 
 ## 日誌
 
-### 2026-05-15
+### 2026-05-15（收尾）
 
-- 實施 Cursor 主控加強計畫：建立 docs、更新 workflow spec v0.2、README、orchestrator rule。
-- Slack MCP：Channel Charter + E2E 需求 thread 已建立。
-- GitHub：issue #1、`feature/bootstrap-orchestrator` branch。
-- 頻道 bot 已齊（復掃 2026-05-15）：Claude、Cursor、Codex、GitHub；roster 已更新。
-- 待人工：`@Cursor settings`、Workflow Builder shortcut。
-- Phase F：已產出可攜帶 skill，供下一個正式 AI 專案複用。
+- 使用者已完成：`@Cursor settings`、`@GitHub Copilot` login/default repo。
+- Cursor orchestrator：開 PR、Slack 頻道發布里程碑摘要。
+
+### 2026-05-15（初版）
+
+- 實施 Cursor 主控加強計畫；E2E issue #1；Phase F skill 產出。
