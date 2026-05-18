@@ -1,3 +1,5 @@
+[![Copilot cloud agent](https://github.com/chang180/ai-orchestrator-workflow-demo/actions/workflows/copilot-swe-agent/copilot/badge.svg)](https://github.com/chang180/ai-orchestrator-workflow-demo/actions/workflows/copilot-swe-agent/copilot)
+
 # AI Orchestrator Workflow Demo
 
 這個 repo 用來示範一個 AI-first 專案工作流：
