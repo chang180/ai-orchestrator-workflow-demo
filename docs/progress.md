@@ -28,7 +28,8 @@
 
 ### 2026-05-18
 
-- **Handoff v2**（進行中）：branch `test/agent-handoff-v2`；issue [#7](https://github.com/chang180/ai-orchestrator-workflow-demo/issues/7)；[Slack](https://devstream-core.slack.com/archives/C0B40L36REE/p1779068753832629)。T1–T3 要求 **PR**；T4 Claude **Slack 審閱**。複審手冊：`docs/agent-handoff/ORCHESTRATOR-REVIEW.md`。
+- **Handoff v3 協定定稿**：`PROTOCOL-v3.md`、`TEST-RESULTS.md`、skill `handoff-protocol.md`；[Slack v3](https://devstream-core.slack.com/archives/C0B40L36REE/p1779069759008549)；issue [#9](https://github.com/chang180/ai-orchestrator-workflow-demo/issues/9)。Test C Claude ✅（handoff-complete 格式）；T0 PR#8 已關。
+- **Handoff v2**（進行中）：branch `test/agent-handoff-v2`；issue [#7](https://github.com/chang180/ai-orchestrator-workflow-demo/issues/7)。
 - **Handoff v1**：branch `test/agent-handoff-delegation`；issue #6；無 git 交付（已棄用「勿開 PR」策略）。
 - Bot 實測 v2：頻道設定後 Claude/Codex 回覆正確 repo；文件 `slack-bot-mention-tests.md`。
 - PR #4 已合併至 main（`docs/slack-bot-mention-tests.md`）。

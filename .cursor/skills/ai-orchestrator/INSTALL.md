@@ -38,6 +38,15 @@ Agent 在任一 workspace 皆可被觸發（description 關鍵字：orchestrator
 
 正式專案：**skill 負責怎麼做；docs 負責這個專案的參數。**
 
+Handoff 定稿請一併複製或對照：
+
+- `handoff-protocol.md`（skill 內精簡版）
+- 目標 repo 的 `docs/agent-handoff/PROTOCOL-v3.md`（可由 demo 複製後改 channel_id）
+
 ## 更新 skill
 
-demo repo 改進 workflow 後，重新 `cp -R` 覆蓋目標專案的 skill 目錄，或 diff 合併 `SKILL.md` / `reference-slack-limits.md`。
+demo repo 改進 workflow 後，重新 `cp -R` 覆蓋目標專案的 skill 目錄，或 diff 合併：
+
+- `SKILL.md`
+- `handoff-protocol.md`
+- `reference-slack-limits.md`

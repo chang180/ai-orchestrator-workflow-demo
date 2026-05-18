@@ -5,9 +5,10 @@
 | 版本 | Branch | 說明 |
 |------|--------|------|
 | v1 | `test/agent-handoff-delegation` | 初版；禁止 PR → 幾乎無 git 交付 |
-| **v2** | `test/agent-handoff-v2` | **必須 PR** + Claude Slack 審閱；編排者可複審 |
+| **v2** | `test/agent-handoff-v2` | **必須 PR** + Claude Slack 審閱 |
+| **v3** | （協定） | [PROTOCOL-v3.md](PROTOCOL-v3.md) · [TEST-RESULTS.md](TEST-RESULTS.md) |
 
-**目前請用 v2**：[HANDOFF-v2.md](HANDOFF-v2.md) · [ORCHESTRATOR-REVIEW.md](ORCHESTRATOR-REVIEW.md)
+**目前請用 v3 協定**：[PROTOCOL-v3.md](PROTOCOL-v3.md) · 實作 branch 仍可用 v2 的 `test/agent-handoff-v2`
 
 ## 核心原則
 

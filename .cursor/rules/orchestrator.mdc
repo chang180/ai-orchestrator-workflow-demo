@@ -7,25 +7,32 @@ alwaysApply: true
 
 # Orchestrator Rules
 
-本專案中 **Cursor 為主執行 orchestrator**；ChatGPT 僅顧問。
+本專案中 **Cursor IDE 為主 orchestrator**；Slack 的 `@Cursor` 為 **Cloud Agent**（另一條執行路徑）。
+
+## Handoff（v3）
+
+1. 建 branch + `docs/agent-handoff/tasks/*` → **git push 後**再 Slack。
+2. 指派用 **execute 模板**（見 `docs/agent-handoff/PROTOCOL-v3.md`、skill `handoff-protocol.md`）。
+3. 每則 Slack 加 **`Reply in Traditional Chinese (zh-TW).`**
+4. **禁止**把 `handoff-complete …` **@Cursor** 當工作單（會開 PR）；Ping 用 `ack-only`。
+5. 收工：`slack_read_thread` 搜 `handoff-complete` → `gh pr diff` → 複審。
 
 ## 執行優先順序
 
-1. 讀 Slack thread / 頻道需求（Slack MCP）。
-2. 更新 GitHub（issue、branch、`docs/progress.md`）。
-3. 回 Slack thread 回報（含 issue/branch 連結）。
-4. 依 `docs/agent-roster.md` mention 協作 bot；頻道成員掃描須 `include_bots: true`。
-5. 預設分派：Claude、Codex、`<@U0B3VUN3QA1>`（GitHub 整合，非 Copilot）。
-6. 需要 Slack 內 AI 寫 code / 開 PR 時，可擇一：`<@U0B3VUN3QA1> In owner/repo, …` 或 `@Cursor`；handoff 須要求完成後 **同 thread** `<@U09H5GMRSEQ> handoff-complete`（見 `docs/agent-handoff/COMPLETION-REPORT.md`），勿讓人空等輪詢。
+1. Slack MCP 讀需求。
+2. `gh` 更新 issue / branch / `docs/progress.md`。
+3. Slack 回報 + 依 roster handoff。
+4. `include_bots: true` 掃成員。
 
 ## 禁止假設
 
-- Repo workflow YAML 會自動部署到 Slack Workflow Builder。
-- MCP 可邀請 bot 進頻道或列出 workspace 全部已安裝 app。
-- MCP 可管理 Slack 側邊欄「頻道區段」。
+- Workflow YAML 自動部署 Slack。
+- MCP 邀請 bot、管理頻道區段、列出全部 App。
+- 其他 AI 會自動排隊執行編排指令。
+- Contributors 出現「Claude/Codex」帳號（實為你的帳號或 bot）。
 
 ## 契約檔
 
 - `docs/agent-contract.md`
+- `docs/agent-handoff/PROTOCOL-v3.md`
 - `docs/slack-capability-matrix.md`
-- `.workflow-specs/slack-demo-request.yml`
