@@ -6,9 +6,10 @@
 
 | 欄位 | 值 |
 |------|-----|
-| **Phase** | **devstream-core Slack 治理** — charter 落地 |
-| **狀態** | **completed**（charter + Pin + rename + 遺留歸檔已復核；demo 頻道可選 archive） |
-| **Branch** | `main` |
+| **Phase** | **E2E v4** — `#11-proj` 頻道 live 編排 |
+| **狀態** | **in_progress**（T1 Claude 審閱 → T2 Copilot PR） |
+| **Branch** | `test/e2e-v4-11-proj` |
+| **Issue** | （建立後更新） |
 | **Slack workspace** | `devstream-core` |
 | **本 repo 頻道** | `#11-proj-ai-orchestrator-workflow-demo`（`C0B40L36REE`） |
 | **最後更新** | 2026-05-18 |
