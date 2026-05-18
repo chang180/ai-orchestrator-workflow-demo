@@ -1,6 +1,6 @@
 # Agent Handoff 模式（branch + 任務文件）
 
-驗證構想：**Cursor 編排者**先建立 branch 與任務文件，再透過 Slack `@` 把**同一 branch 上的不同子任務**交給 Codex / Cursor Cloud / GitHub Copilot。
+驗證構想：**Cursor 編排者**先建立 branch 與任務文件，再透過 Slack `@` 把**同一 branch 上的不同子任務**交給 Claude / Codex / Cursor Cloud / GitHub Copilot。
 
 ## 可行嗎？
 
@@ -31,6 +31,7 @@
 | 檔案 | 對象 |
 |------|------|
 | [HANDOFF.md](HANDOFF.md) | 所有人類 / agent 讀的總覽 |
+| [tasks/TASK-claude.md](tasks/TASK-claude.md) | Claude |
 | [tasks/TASK-codex.md](tasks/TASK-codex.md) | Codex |
 | [tasks/TASK-cursor-cloud.md](tasks/TASK-cursor-cloud.md) | @Cursor Cloud |
 | [tasks/TASK-github.md](tasks/TASK-github.md) | @github Copilot agent |

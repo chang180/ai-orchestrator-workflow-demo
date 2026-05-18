@@ -17,6 +17,7 @@
 | T1 | Codex | `docs/agent-handoff/artifacts/codex-deliverable.md` | [TASK-codex.md](tasks/TASK-codex.md) |
 | T2 | @Cursor Cloud | `docs/agent-handoff/artifacts/cursor-deliverable.md` | [TASK-cursor-cloud.md](tasks/TASK-cursor-cloud.md) |
 | T3 | @github Copilot | `docs/agent-handoff/artifacts/github-deliverable.md` | [TASK-github.md](tasks/TASK-github.md) |
+| T4 | Claude | `docs/agent-handoff/artifacts/claude-deliverable.md` | [TASK-claude.md](tasks/TASK-claude.md) |
 
 ## 共通規則
 
@@ -28,6 +29,6 @@
 ## 編排者檢查清單
 
 - [ ] branch 已 push
-- [ ] Slack 三則 handoff 已發（各 bot 一則）
+- [ ] Slack 四則 handoff 已發（Codex / Cursor / GitHub / Claude）
 - [ ] 30–60 分鐘後檢查 `artifacts/` 與 thread 回覆
 - [ ] 彙總至 `docs/progress.md`
