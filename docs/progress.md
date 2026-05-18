@@ -6,9 +6,9 @@
 
 | 欄位 | 值 |
 |------|-----|
-| **Phase** | **devstream-core Slack 治理** — charter 落地 |
-| **狀態** | **completed**（charter + Pin + rename + 遺留歸檔已復核；demo 頻道可選 archive） |
-| **Branch** | `main` |
+| **Phase** | **封存** — AI workflow demo 驗證完成 |
+| **狀態** | **archived**（skills 可攜帶至其他專案；本頻道唯讀） |
+| **Branch** | `main`（凍結維護） |
 | **Slack workspace** | `devstream-core` |
 | **本 repo 頻道** | `#11-proj-ai-orchestrator-workflow-demo`（`C0B40L36REE`） |
 | **最後更新** | 2026-05-18 |
@@ -36,6 +36,12 @@
 - **勿**：把 `handoff-complete` 當任務 @Cursor（見 T0 / PR #8）。
 
 ## 日誌
+
+### 2026-05-18（封存）
+
+- Slack `#11-proj-ai-orchestrator-workflow-demo` 發布封存公告（[訊息](https://devstream-core.slack.com/archives/C0B40L36REE/p1779083259548139)）。
+- `main` 已含可攜帶 skills（`.cursor/skills/README.md`）；新專案只複製 skills + bootstrap。
+- 實戰編排請用 `#10-proj-l12cv` 等產品頻道。
 
 ### 2026-05-18（收尾）
 
