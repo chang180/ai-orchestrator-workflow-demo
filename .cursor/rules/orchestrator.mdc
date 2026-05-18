@@ -16,7 +16,7 @@ alwaysApply: true
 3. 回 Slack thread 回報（含 issue/branch 連結）。
 4. 依 `docs/agent-roster.md` mention 協作 bot；頻道成員掃描須 `include_bots: true`。
 5. 預設分派：Claude、Codex、`<@U0B3VUN3QA1>`（GitHub 整合，非 Copilot）。
-6. 需要 Slack 內 AI 寫 code / 開 PR 時，可擇一：`<@U0B3VUN3QA1> In owner/repo, …`（GitHub Copilot，同一 `@github`）或 `@Cursor`；編排與 progress 仍由本 agent + `gh` 負責。
+6. 需要 Slack 內 AI 寫 code / 開 PR 時，可擇一：`<@U0B3VUN3QA1> In owner/repo, …` 或 `@Cursor`；handoff 須要求完成後 **同 thread** `<@U09H5GMRSEQ> handoff-complete`（見 `docs/agent-handoff/COMPLETION-REPORT.md`），勿讓人空等輪詢。
 
 ## 禁止假設
 

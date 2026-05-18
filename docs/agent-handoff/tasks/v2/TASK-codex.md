@@ -29,9 +29,17 @@ status: ready_for_review
 completed_by: codex at <ISO8601>
 ```
 
-## Slack 完成時
+## 完成回報（必做）
 
-在實驗 thread 回覆：**PR 連結** + 一句狀態。
+PR 就緒後 **立刻** 在 handoff **同一 thread** 貼（見 [COMPLETION-REPORT.md](../../COMPLETION-REPORT.md)）：
+
+```text
+<@U09H5GMRSEQ> handoff-complete
+task: T1
+status: ready_for_review
+pr: <PR URL>
+artifact: docs/agent-handoff/artifacts/v2/codex-deliverable.md
+```
 
 ## 禁止
 
