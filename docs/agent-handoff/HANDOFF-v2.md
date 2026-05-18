@@ -4,7 +4,7 @@
 **Repo**：`chang180/ai-orchestrator-workflow-demo`  
 **Branch**：`test/agent-handoff-v2`（PR **target 此 branch**，勿直接推 `main`）  
 **Issue**：https://github.com/chang180/ai-orchestrator-workflow-demo/issues/7  
-**Slack**：建立後寫入 `docs/progress.md`
+**Slack**：https://devstream-core.slack.com/archives/C0B40L36REE/p1779068753832629
 
 ## 與 v1 差異
 
