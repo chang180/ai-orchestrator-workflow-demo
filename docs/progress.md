@@ -9,7 +9,7 @@
 | **Phase** | **E2E v4** — `#11-proj` 頻道 live 編排 |
 | **狀態** | **in_progress**（T1 Claude 審閱 → T2 Copilot PR） |
 | **Branch** | `test/e2e-v4-11-proj` |
-| **Issue** | （建立後更新） |
+| **Issue** | [#12](https://github.com/chang180/ai-orchestrator-workflow-demo/issues/12) |
 | **Slack workspace** | `devstream-core` |
 | **本 repo 頻道** | `#11-proj-ai-orchestrator-workflow-demo`（`C0B40L36REE`） |
 | **最後更新** | 2026-05-18 |
