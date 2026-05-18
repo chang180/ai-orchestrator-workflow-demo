@@ -39,7 +39,7 @@ gh pr view <num> --comments
 gh pr diff <num>
 
 # 4. Slack 審閱（Claude）
-# slack_read_thread channel_id=C0B40L36REE message_ts=<parent_ts>
+# slack_read_thread channel_id=C0B40L36REE message_ts=<parent_ts>  # #11-proj-ai-orchestrator-workflow-demo
 ```
 
 ## 通過 / 打回標準

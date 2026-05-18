@@ -138,14 +138,29 @@ notes: （繁中一句）
 
 ---
 
-## 7. 產品頻道討論（`#10-proj-l12cv`）
+## 7. 產品頻道討論
+
+### `#11-proj-ai-orchestrator-workflow-demo`（本 repo）
 
 ```text
 [feature]
 
 （描述）
 
-Repo: {{repo}}
+Repo: chang180/ai-orchestrator-workflow-demo
+Issue: {{issue_url|optional}}
+```
+
+本頻道含全 bot，可直接 `[handoff]` @ Codex／Claude／@Cursor；亦可分流至 `#20-agent-*`。
+
+### `#10-proj-l12cv`（旗艦產品）
+
+```text
+[feature]
+
+（描述）
+
+Repo: chang180/l12cv
 Issue: {{issue_url|optional}}
 ```
 

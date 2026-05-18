@@ -10,7 +10,7 @@ flowchart TB
 
   subgraph entry [Entry]
     SlackWF["Slack Workflow Builder"]
-    SlackCh["#ai-orchestrator-workflow-demo"]
+    SlackCh["#11-proj-ai-orchestrator-workflow-demo"]
   end
 
   subgraph orchestration [Orchestration]

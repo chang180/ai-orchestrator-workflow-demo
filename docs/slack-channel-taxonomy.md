@@ -20,6 +20,7 @@
 |------|------------|--------|------|
 | `#00-general` | `C09HE0CEA49` | — | **keep** — charter 已發（2026-05-18） |
 | `#00-social` | `C09HE0CH4L9` | 1 | **keep** |
+| `#11-proj-ai-orchestrator-workflow-demo` | `C0B40L36REE` | 5 | **keep** — 本 repo（`ai-orchestrator-workflow-demo`）E2E 實驗 |
 | `#10-proj-l12cv` | `C0B47UBS2HH` | 1 | **keep** — 旗艦產品 l12cv |
 | `#20-agent-claude` | `C0B4HTXG5PE` | 2 | **keep** — @claude 已加入 |
 | `#21-agent-cursor` | `C0B4E9W84LS` | 2 | **keep** — @cursor 已加入 |
@@ -32,13 +33,14 @@
 | `#42-knowledge-decisions` | `C0B3YS0GPST` | 1 | **keep** — 已 rename（2026-05-18） |
 | `#99-incubator` | `C0B4G5B0M1P` | 1 | **keep** — quota commander 等待孵化 |
 
-## 非標準／遺留頻道
+## 已歸檔（遺留）
 
-| 頻道 | Channel ID | 成員數 | 建議 |
-|------|------------|--------|------|
-| `#proj-ai-orchestrator-workflow-demo` | `C0B40L36REE` | — | **可選 archive** — 已 rename（原 `#ai-orchestrator-workflow-demo`），仍為 active；bots 已遷 Layer 2/3 |
-| `#proj-ai-demo` | `C0B3UAM8199` | — | **已歸檔**（MCP 搜尋不可見，2026-05-18 復核） |
-| `#ai-demo` | `C0B4UV4RJ3A` | — | **已歸檔**（MCP 搜尋不可見，2026-05-18 復核） |
+| 頻道 | Channel ID | 備註 |
+|------|------------|------|
+| `#proj-ai-demo` | `C0B3UAM8199` | 已歸檔（2026-05-18） |
+| `#ai-demo` | `C0B4UV4RJ3A` | 已歸檔（2026-05-18） |
+
+> `#11-proj-ai-orchestrator-workflow-demo` 為原 `#ai-orchestrator-workflow-demo` 之正式 Layer 1 命名（非遺留）。
 
 ## 訊息標籤（Channel Charter）
 
@@ -84,6 +86,7 @@ Tradeoff: （取捨）
 | 產品 | 頻道 | 狀態 |
 |------|------|------|
 | **l12cv** | `#10-proj-l12cv` | 旗艦 |
+| **ai-orchestrator-workflow-demo** | `#11-proj-ai-orchestrator-workflow-demo` | 本 repo／編排 demo |
 | **quota commander** | `#99-incubator`（建議） | 孵化中，尚無專屬頻道 |
 
 ## 更新紀錄
@@ -92,4 +95,5 @@ Tradeoff: （取捨）
 |------|------|
 | 2026-05-18 | 初版：devstream-core 全頻道稽核 |
 | 2026-05-18 | 修正 `#00-general` ID；Slack charter 訊息已發 |
-| 2026-05-18 | 復核：rename / Pin / 遺留歸檔完成；demo 頻道改為 `proj-ai-orchestrator-workflow-demo` |
+| 2026-05-18 | 復核：rename / Pin / 遺留歸檔完成 |
+| 2026-05-18 | 本 repo 頻道 → `#11-proj-ai-orchestrator-workflow-demo`（`C0B40L36REE`） |

@@ -8,7 +8,7 @@ metadata:
   transport: slack
   repository: chang180/ai-orchestrator-workflow-demo
   slack_channel:
-    name: ai-orchestrator-workflow-demo
+    name: 11-proj-ai-orchestrator-workflow-demo
     id: C0B40L36REE
 
 trigger:

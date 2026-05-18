@@ -14,7 +14,7 @@ description: >-
 ## 何時啟用
 
 - Slack → Cursor → GitHub → Slack 回報
-- `docs/agent-roster.md`、workflow spec、Channel Charter
+- `docs/agent-roster.md`、workflow spec、Channel Charter（本 repo：`#11-proj-ai-orchestrator-workflow-demo`）
 - 多 agent **handoff**（branch + 任務文件 + Slack 分派）
 - 關鍵字：orchestrator、handoff-complete、notify_handoff
 

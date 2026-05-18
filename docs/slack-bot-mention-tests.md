@@ -1,5 +1,7 @@
 # Slack Bot @mention 實測紀錄
 
+> **頻道**（2026-05-18）：`#11-proj-ai-orchestrator-workflow-demo`（`C0B40L36REE`）。下方 thread 連結仍有效（channel ID 不變）。
+
 驗證「頻道／App 設定完成後」各 bot 被 `@` 時的實際行為。  
 **Slack 平台**只傳遞 `app_mention` 給該 App；**是否回、怎麼回**由各產品自己決定（[官方文件](https://docs.slack.dev/reference/events/app_mention)）。
 

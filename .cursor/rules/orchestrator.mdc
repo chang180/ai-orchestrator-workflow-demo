@@ -41,5 +41,5 @@ alwaysApply: true
 
 ## Slack workspace（devstream-core）
 
-- 產品討論：`#10-proj-l12cv` · Agent：`#20-agent-*` · 模板見 `docs/slack-handoff-template.md`
+- **本 repo**：`#11-proj-ai-orchestrator-workflow-demo`（`C0B40L36REE`）· l12cv：`#10-proj-l12cv` · Agent 專線：`#20-agent-*`
 - Skill：`.cursor/skills/slack-orchestrator/`

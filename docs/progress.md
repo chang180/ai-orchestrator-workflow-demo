@@ -9,7 +9,8 @@
 | **Phase** | **devstream-core Slack 治理** — charter 落地 |
 | **狀態** | **completed**（charter + Pin + rename + 遺留歸檔已復核；demo 頻道可選 archive） |
 | **Branch** | `main` |
-| **Slack workspace** | `devstream-core`（主頻道 `#00-general` `C09HE0CEA49`） |
+| **Slack workspace** | `devstream-core` |
+| **本 repo 頻道** | `#11-proj-ai-orchestrator-workflow-demo`（`C0B40L36REE`） |
 | **最後更新** | 2026-05-18 |
 
 ## 里程碑
@@ -25,7 +26,7 @@
 - [x] devstream-core 頻道稽核 → `docs/slack-channel-taxonomy.md`
 - [x] Slack charter 訊息已發（13 頻道）；`docs/agent-roster.md` 已更新
 - [x] 人工：Pin charter、Rename `#42-knowledge-decisions`、Archive `#proj-ai-demo` / `#ai-demo`（2026-05-18 復核）
-- [ ] 可選：Archive `#proj-ai-orchestrator-workflow-demo`（目前已 rename，仍 active）
+- [x] 本 repo 頻道 → `#11-proj-ai-orchestrator-workflow-demo`（2026-05-18）
 
 ## Demo 結論（給下一專案）
 

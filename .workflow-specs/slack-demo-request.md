@@ -5,7 +5,7 @@
 ## 前置條件
 
 - Slack workspace：`devstream-core`
-- 專案頻道：`#ai-orchestrator-workflow-demo`（`C0B40L36REE`）
+- 專案頻道：`#11-proj-ai-orchestrator-workflow-demo`（`C0B40L36REE`）
 - Cursor：Slack MCP 已連線；GitHub `gh` 已登入 `chang180`
 - Repo：`chang180/ai-orchestrator-workflow-demo`
 
@@ -13,7 +13,7 @@
 
 ### 1. 邀請 Bot 進專案頻道（人工，MCP 無法代邀）
 
-在 `#ai-orchestrator-workflow-demo` 執行：
+在 `#11-proj-ai-orchestrator-workflow-demo` 執行：
 
 ```text
 /invite @Claude
@@ -80,7 +80,7 @@ Bootstrap AI workflow demo — 驗證 Cursor 主控鏈路
 1. Slack 左側 **自動化** → **建立** → **Workflow**
 2. **觸發程序**：Shortcut → 名稱 `/demo-project`（或自訂，需與 yml `command` 一致）
 3. **步驟建議**（保持簡單）：
-   - 在 `#ai-orchestrator-workflow-demo` 發送訊息（含表單欄位：專案名稱、需求摘要）
+   - 在 `#11-proj-ai-orchestrator-workflow-demo` 發送訊息（含表單欄位：專案名稱、需求摘要）
    - 可選：Reply in thread
    - 可選：訊息末尾提示 `@Cursor in ai-orchestrator-workflow-demo, 處理此 thread 需求`
 4. **發布** workflow

@@ -28,7 +28,7 @@
 
 ### Phase B — Slack 與 Bot Roster
 
-- [x] 在 `#ai-orchestrator-workflow-demo` `/invite` 關鍵 bot（Claude、Cursor、Codex、GitHub）
+- [x] 在 `#11-proj-ai-orchestrator-workflow-demo` `/invite` 關鍵 bot（Claude、Cursor、Codex、GitHub）
 - [x] `docs/agent-roster.md` 清查與維護
 - [x] `@Cursor settings` 設 default repo：`chang180/ai-orchestrator-workflow-demo`
 - [ ] Cloud Agents routing：`orchestrator` / `workflow` → 本 repo（**需你在 Dashboard 設定**）
@@ -73,7 +73,7 @@
 
 ## Slack 頻道
 
-- **專案頻道**：`#ai-orchestrator-workflow-demo`（`C0B40L36REE`）
+- **專案頻道**：`#11-proj-ai-orchestrator-workflow-demo`（`C0B40L36REE`）
 - **參考頻道**：`#proj-ai-demo`（已有 Claude bot 紀錄）
 
 ## 成功標準

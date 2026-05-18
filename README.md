@@ -40,6 +40,7 @@ Slack Workflow Builder **不等同** GitHub Actions：repo 內 YAML 是 **contra
 
 | 用途 | 頻道 | Channel ID |
 |------|------|------------|
+| **本 repo 實驗** | `#11-proj-ai-orchestrator-workflow-demo` | `C0B40L36REE` |
 | 公告／導覽 | `#00-general` | `C09HE0CEA49` |
 | 旗艦產品 l12cv | `#10-proj-l12cv` | `C0B47UBS2HH` |
 | Claude 審閱 | `#20-agent-claude` | `C0B4HTXG5PE` |
@@ -49,9 +50,9 @@ Slack Workflow Builder **不等同** GitHub Actions：repo 內 YAML 是 **contra
 
 完整分層與訊息標籤：[docs/slack-channel-taxonomy.md](docs/slack-channel-taxonomy.md) · Handoff 模板：[docs/slack-handoff-template.md](docs/slack-handoff-template.md)
 
-**Demo 遺留**（可選 archive）：`#proj-ai-orchestrator-workflow-demo`（`C0B40L36REE`）— 新 handoff 請用 Layer 2/3 專線。
+本專案 E2E 實驗預設在 `#11-proj-ai-orchestrator-workflow-demo`（全 bot 在內）；亦可分流至 `#20-agent-*` 專線。
 
-設定：各 agent 頻道內 `@Cursor settings` / Codex environment / Claude repo 綁定；見 [runbook](.workflow-specs/slack-demo-request.md)。
+設定：`@Cursor settings` / Codex environment / Claude 綁定 **chang180/ai-orchestrator-workflow-demo**；見 [runbook](.workflow-specs/slack-demo-request.md)。
 
 ## Repository Layout
 

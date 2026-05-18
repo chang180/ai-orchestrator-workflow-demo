@@ -33,7 +33,7 @@ description: >-
 | Layer | 頻道 | 用途 |
 |-------|------|------|
 | 0 | `00-general`, `00-social` | 公告、社交 |
-| 1 | `10-proj-l12cv` | 產品討論（標籤見下） |
+| 1 | `10-proj-*` / `11-proj-*` | 產品討論（如 `10-proj-l12cv`、`11-proj-ai-orchestrator-workflow-demo`） |
 | 2 | `20-agent-claude`, `21-agent-cursor`, `22-agent-codex` | Agent handoff bus |
 | 3 | `30-dev-github`, `31-dev-release`, `32-dev-bugs` | 工程與發版 |
 | 4 | `40-knowledge-prompts`, `41-knowledge-architecture`, `42-knowledge-decisions` | 知識庫 |
@@ -93,6 +93,6 @@ Tradeoff:
 |------|------|------|
 | 2026-05-18 | 初版治理稽核、charter 發送 | done |
 | 2026-05-18 | Pin / rename `#42-knowledge-decisions` / 遺留歸檔 | done（復核 score **88**） |
-| — | 可選 Archive `#proj-ai-orchestrator-workflow-demo` | pending |
+| 2026-05-18 | 本 repo → `#11-proj-ai-orchestrator-workflow-demo` | done |
 
 **主頻道**：`#00-general` = `C09HE0CEA49`

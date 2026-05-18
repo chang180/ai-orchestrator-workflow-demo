@@ -3,6 +3,7 @@
 Slack workspace 內可調用的 bot／整合角色。Cursor orchestrator 執行 handoff 時依此表 `@mention`。
 
 **Workspace**：`devstream-core`  
+**本 repo 專案頻道**：`#11-proj-ai-orchestrator-workflow-demo`（`C0B40L36REE`）  
 **清查方式**：`slack_list_channel_members(channel_id, include_bots=true)`（必須開啟 `include_bots`）。
 
 ## 頻道對照（devstream-core）
@@ -11,6 +12,7 @@ Slack workspace 內可調用的 bot／整合角色。Cursor orchestrator 執行 
 |------|------------|------|
 | `#00-general` | `C09HE0CEA49` | 公告、OS 導覽 |
 | `#00-social` | `C09HE0CH4L9` | 社交 |
+| `#11-proj-ai-orchestrator-workflow-demo` | `C0B40L36REE` | **本 repo** 產品／E2E 實驗（全 bot） |
 | `#10-proj-l12cv` | `C0B47UBS2HH` | 旗艦產品 l12cv |
 | `#20-agent-claude` | `C0B4HTXG5PE` | Claude 審閱 |
 | `#21-agent-cursor` | `C0B4E9W84LS` | Cursor Cloud |
@@ -49,9 +51,10 @@ Slack workspace 內可調用的 bot／整合角色。Cursor orchestrator 執行 
 | `#22-agent-codex` | @codex, @cursor |
 | `#30-dev-github` | @github |
 
-### 遺留 `#ai-orchestrator-workflow-demo`（`C0B40L36REE`）
+### `#11-proj-ai-orchestrator-workflow-demo`（`C0B40L36REE`）
 
-建議 archive；bots 已遷至上表專線。2026-05-18 復掃 → 5 位：@cursor, @chang180, @github, @claude, @codex。
+本 repo 預設實驗頻道。2026-05-18 復掃 → **5 位**：@cursor, @chang180, @github, @claude, @codex。  
+（2026-05-18 由 `ai-orchestrator-workflow-demo` → `proj-ai-*` → `11-proj-*` 重新命名）
 
 ## 頻道設定前置（人工）
 
@@ -97,3 +100,4 @@ Reply in Traditional Chinese (zh-TW).
 | 2026-05-18 | v2 實測 Claude/Codex |
 | 2026-05-18 | 更正 Copilot mention |
 | 2026-05-18 | **devstream-core** 頻道對照與 agent 專線 |
+| 2026-05-18 | 本 repo 頻道 → `#11-proj-ai-orchestrator-workflow-demo` |
