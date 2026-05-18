@@ -16,22 +16,21 @@
 | 列出全部已安裝 App | **不行** → 成員掃描 + 手動補登 |
 | 管理側邊欄頻道區段 | **不行** → manual_only |
 | repo YAML 部署 Workflow | **不行** → Workflow Builder 人工 |
-| `@github` = Copilot | **否** → Copilot 用 `@GitHub Copilot` |
+| 有獨立的 `@GitHub Copilot` bot | **否** → 與 `@github` 同一 App（`U0B3VUN3QA1`） |
 
-## `@github` vs `@GitHub Copilot`
+## GitHub App 雙模式（同一 `@github`）
 
-| | `@github` | `@GitHub Copilot` |
-|--|-----------|-------------------|
-| 開 PR / 寫 code | 否 | 是 |
-| `/github open` | 是 | — |
-| thread 脈絡進 PR | 既有 PR | 整串 thread → agent |
+| 模式 | 觸發 | 行為 |
+|------|------|------|
+| 整合 | `/github subscribe`、`/github open`… | 通知、issue、thread→既有 PR |
+| Copilot agent | `<@U0B3VUN3QA1>` + 自然語言任務 | 非同步寫 code、開 PR |
 
 ## 編排衝突避免
 
 - 主控：Cursor IDE + `gh`
-- 預設 @：Claude、Codex、GitHub（整合）
-- 按需 @：`@GitHub Copilot` 或 `@Cursor`（二選一）
-- PR 建立後：`<@github>` 同步 thread
+- 預設 @：Claude、Codex
+- 按需實作：`<@U0B3VUN3QA1> In repo, …` 或 `@Cursor`（二選一）
+- 訂閱通知：`/github subscribe`（slash）
 
 ## 官方文件
 
@@ -39,3 +38,4 @@
 - https://cursor.com/docs/cloud-agent
 - https://docs.github.com/en/integrations/how-tos/slack/use-github-in-slack
 - https://docs.github.com/copilot/how-tos/use-copilot-agents/coding-agent/integrate-coding-agent-with-slack
+- https://github.blog/changelog/2025-10-28-work-with-copilot-coding-agent-in-slack/

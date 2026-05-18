@@ -55,7 +55,7 @@ steps:
         - codex
         - github
       on_demand:
-        - github_copilot  # mention: @GitHub Copilot
+        - github_copilot  # on_demand: <@U0B3VUN3QA1> In owner/repo, …
         - cursor_cloud    # mention: @Cursor
 
   - id: update_progress

@@ -45,11 +45,11 @@ description: >-
 | Cursor IDE | 本機對話 | 編排、`gh`、progress |
 | `@Cursor` | Slack | Cloud Agent 實作 / PR |
 | `@github` | `<@USER_ID>` / slash | 通知、`/github open`、thread→既有 PR |
-| `@GitHub Copilot` | Slack 文字 | Copilot cloud agent（按需） |
+| `@github` Copilot 模式 | `<@U0B3VUN3QA1>` + 任務 | Copilot cloud agent（按需，無獨立 bot） |
 | Claude / Codex | `<@USER_ID>` | 審閱、實作（預設分派） |
 | ChatGPT | 人工貼上 | 顧問，不寫入 spec orchestrator |
 
-**同一任務勿同時 @ `@Cursor` 與 `@GitHub Copilot` 做重複實作。**
+**同一任務勿同時 @ `@Cursor` 與 `<@U0B3VUN3QA1>`（Copilot 任務）做重複實作。**
 
 ## 新專案啟用
 
