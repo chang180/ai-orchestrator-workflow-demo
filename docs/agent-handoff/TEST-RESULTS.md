@@ -13,27 +13,28 @@
 
 ### Test A — @Cursor ack-only
 
-| 項目 | 預期 | 實際（~90s） |
+| 項目 | 預期 | 實際（~3 min） |
 |------|------|----------------|
-| 語言 | 繁中一句 | _待 Cursor 回覆；90s 內無 bot 訊息_ |
-| PR | 無 | 無新 PR（相對 T0 改善） |
-| 備註 | `ack-only` + 勿開 PR | 已明確寫入 prompt |
+| 語言 | 繁中一句 | ❌ 無 @Cursor bot 回覆 |
+| PR | 無 | ✅ 無新 PR（優於 T0） |
+| 備註 | Cloud 可能排隊慢或忽略 ack-only | 編排改靠 MCP 讀 thread，不依賴 Cloud 回 ping |
 
 ### Test B — Codex execute
 
 | 項目 | 預期 | 實際 |
 |------|------|------|
-| 啟動 | 開 task | ✅ On it（ChatGPT task 連結） |
-| PR | base=test/agent-handoff-v2 | _進行中，待 handoff-complete_ |
-| handoff-complete | 有 | _待填_ |
+| 啟動 | 開 task | ✅ |
+| handoff-complete | 有、可不 @Cursor | ✅ 繁中 summary + 格式正確 |
+| PR URL | 可點 | ⚠️ 環境未回傳 URL；稱已 make_pr → base `test/agent-handoff-v2` |
+| GitHub 上 PR | open | ❌ 尚無（僅 Codex 環境內 commit；與 v2 相同權限問題） |
 
 ### Test C — Claude review
 
 | 項目 | 預期 | 實際 |
 |------|------|------|
 | 語言 | 繁中 | ✅ |
-| verdict + findings | 有 | ✅（blocked：PROTOCOL-v3 當時不在 main） |
-| handoff-complete 區塊 | 有 | ✅ 格式正確 |
+| verdict + findings | 有 | ✅（先 blocked 檔案不在 main，後 needs_changes；合理） |
+| handoff-complete 區塊 | 有 | ✅ |
 | 開 PR | 無 | ✅ |
 
 ## 定稿結論（寫入 Skill）

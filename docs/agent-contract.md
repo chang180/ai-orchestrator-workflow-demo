@@ -71,7 +71,7 @@ Slack 內**只有一個** GitHub bot；整合與 Copilot coding agent 共用此 
 編排者（Cursor IDE）在 **push 前** 完成：
 
 1. `git checkout -b feature/...`（或 `test/...`）
-2. 撰寫 `docs/agent-handoff/HANDOFF-v2.md` 與 `docs/agent-handoff/tasks/v2/TASK-<executor>.md`
+2. 撰寫 `docs/agent-handoff/PROTOCOL-v3.md` 與 `docs/agent-handoff/tasks/v2/TASK-<executor>.md`
 3. `git push -u origin <branch>`
 4. Slack **每 bot 一則**，含 `branch=`、任務檔 **GitHub blob URL**、交付路徑、**完成後 `@Cursor` + `handoff-complete` 格式**（見 [agent-handoff/COMPLETION-REPORT.md](agent-handoff/COMPLETION-REPORT.md)）
 
