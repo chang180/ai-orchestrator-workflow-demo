@@ -29,16 +29,18 @@ Reply in Traditional Chinese (zh-TW).
 
 ### Codex / @github（execute → PR）
 
+**@github** 請用**步驟化**指派（見 `docs/slack-handoff-template.md` §4b），完成時 `notes` 含：`已完成，請通知 Cursor IDE 編排者複審。`
+
 ```text
 <@EXECUTOR_ID> Reply in Traditional Chinese (zh-TW).
 
-Repo: chang180/ai-orchestrator-workflow-demo
-Branch (PR base): test/agent-handoff-v2
-Task: https://github.com/.../blob/test/agent-handoff-v2/docs/agent-handoff/tasks/v2/TASK-xxx.md
-Deliverable: docs/agent-handoff/artifacts/v2/xxx-deliverable.md
+You are the coding agent. Do exactly:
+1. Repo: chang180/ai-orchestrator-workflow-demo, branch: test/agent-handoff-v2
+2. Create ONLY: docs/agent-handoff/artifacts/v2/xxx-deliverable.md (see task file)
+3. Push; open PR with BASE branch test/agent-handoff-v2 (NOT main)
+4. Post handoff-complete in this thread; notes must say: 已完成，請通知 Cursor IDE 編排者複審。
 
-Open a PR targeting the branch above. Do not merge to main.
-When done, post handoff-complete in this thread (see COMPLETION-REPORT.md).
+Task: https://github.com/.../blob/test/agent-handoff-v2/docs/agent-handoff/tasks/v2/TASK-xxx.md
 ```
 
 ### @Cursor Cloud（execute）

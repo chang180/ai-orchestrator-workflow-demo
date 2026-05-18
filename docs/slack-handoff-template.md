@@ -111,6 +111,40 @@ Acceptance:
 
 ---
 
+## 4b. GitHub Copilot（execute，步驟化）
+
+Copilot agent 需要**單一明確交付物**與**編號步驟**；勿只寫「implement TASK」。
+
+```text
+[handoff]
+
+<@U0B3VUN3QA1> Reply in Traditional Chinese (zh-TW).
+
+You are the GitHub Copilot coding agent. Do exactly:
+
+1. Repo: {{repo}}, branch: {{branch}} (commit on this branch).
+2. Create ONLY: {{single_file_path}} with content as in task file.
+3. Push and open a PR with BASE branch {{branch}} (NOT main).
+4. In this thread, post handoff-complete (see below).
+
+Do NOT only reply "OK". Do NOT merge.
+
+Task file: {{task_url}}
+```
+
+**完成回報（notes 必含一句）**：
+
+```text
+handoff-complete
+task: {{task_id}}
+status: ready_for_review
+pr: {{pr_url}}
+artifact: {{single_file_path}}
+notes: 已完成，請通知 Cursor IDE 編排者複審。
+```
+
+---
+
 ## 5. Cursor Cloud（ack-only，測通路）
 
 ```text

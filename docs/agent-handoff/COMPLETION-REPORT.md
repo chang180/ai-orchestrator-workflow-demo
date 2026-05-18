@@ -47,7 +47,7 @@ notes: （可選，一句繁中）
 
 | Agent | 完成時 |
 |-------|--------|
-| Codex / @github | 開好 PR 後，**同 thread** 貼上方格式並 `@Cursor` |
+| Codex / @github | 開好 PR 後，**同 thread** 貼 `handoff-complete`；`notes` **必含**：`已完成，請通知 Cursor IDE 編排者複審。` |
 | @Cursor Cloud（T2） | PR 就緒後貼 `handoff-complete`（**不要**再開新任務；僅回報） |
 | Claude（review-only） | 先貼審閱 + `handoff-complete`（**勿**在同行 @Cursor 當 execute） |
 | Claude 喚醒通知（可選） | 完成回報**之後**另起一行 `ack-only` ping（見下） |
@@ -71,7 +71,13 @@ notes: verdict=pass
 
 **避免**：`<@U09H5GMRSEQ> handoff-complete task:T0` 單行 @Cursor → Cloud 會當成新任務開 PR（T0 實測）。
 
-**IDE 編排（本機 Cursor）**：不會自動訂閱 Slack；仍需你開 IDE、或定期 `slack_read_thread`，或由 Cloud `ack-only` 後你再轉述。
+**IDE 編排（本機 Cursor）**：不會自動訂閱 Slack；仍需你開 IDE、或定期 `slack_read_thread`，或由執行者 `notes` 明示「請通知 Cursor IDE」、你再轉述。
+
+### @github Copilot 指派要點
+
+- 用 **編號步驟** + **單一檔案路徑**（見 `slack-handoff-template.md` §4b）
+- 明寫 `branch=` 與 **PR base 不是 main**
+- 勿只寫 “read TASK and implement” — 易只回覆不開 PR
 
 ## 編排者收到後（IDE Cursor）
 
