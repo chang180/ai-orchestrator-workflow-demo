@@ -36,3 +36,10 @@ alwaysApply: true
 - `docs/agent-contract.md`
 - `docs/agent-handoff/PROTOCOL-v3.md`
 - `docs/slack-capability-matrix.md`
+- `docs/slack-channel-taxonomy.md`（devstream-core 頻道）
+- `docs/slack-handoff-template.md`
+
+## Slack workspace（devstream-core）
+
+- 產品討論：`#10-proj-l12cv` · Agent：`#20-agent-*` · 模板見 `docs/slack-handoff-template.md`
+- Skill：`.cursor/skills/slack-orchestrator/`

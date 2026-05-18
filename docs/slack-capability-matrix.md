@@ -2,6 +2,8 @@
 
 本文件記錄 **Cursor IDE + Slack MCP**、**@Cursor Cloud Agent** 與 **僅能人工** 的能力邊界，避免誤以為 API 可完成 Slack UI 上的所有操作。
 
+**適用 workspace**：`devstream-core`（2026-05-18 治理稽核）
+
 ## 總覽
 
 | 功能 | Slack MCP (IDE) | @Cursor Cloud | 僅能人工 |
@@ -15,6 +17,8 @@
 | 搜尋私有頻道 | 需同意 + `slack_search_public_and_private` | — | — |
 | Canvas 讀寫（section） | Yes（需 `section_id`） | — | — |
 | 建立頻道 + 建立時邀請成員 | Yes (`slack_create_conversation`) | join public | — |
+| **重新命名頻道** | **No** | **No** | **Yes** |
+| **歸檔頻道** | **No** | **No** | **Yes** |
 | **邀請 bot 進既有頻道** | **No** | 需 `/invite` | **Yes** |
 | **列出 workspace 已安裝 App** | **No** | **No** | **Yes**（管理後台） |
 | **側邊欄頻道區段** | **No** | **No** | **Yes** |
@@ -33,12 +37,22 @@
 | `slack_send_message` | 發訊息 |
 | `slack_send_message_draft` | 草稿 |
 | `slack_schedule_message` | 排程 |
-| `slack_search_channels` | 搜尋頻道 |
+| `slack_search_channels` | 搜尋頻道（**非**完整 list；需多 query） |
 | `slack_search_public` | 搜尋公開訊息 |
 | `slack_search_users` | 搜尋使用者（bot 不一定可搜到） |
-| `slack_list_channel_members` | 頻道成員（`include_bots: true`） |
+| `slack_list_channel_members` | 頻道成員（**必須** `include_bots: true`） |
 | `slack_add_reaction` | 反應 |
 | `slack_read_canvas` / `slack_update_canvas` | Canvas（非頻道區段） |
+| `slack_create_conversation` | 建立頻道 |
+
+## devstream-core 稽核限制（2026-05-18）
+
+| 限制 | 影響 |
+|------|------|
+| `slack_search_channels` 無「列出全部」 | 需以 `00-`、`10-proj`、`20-agent` 等分批搜尋，可能漏掉未命名頻道 |
+| 搜尋結果**不含** member count | 以 `slack_list_channel_members` 逐頻道補齊 |
+| MCP 無法 `/invite` | Bot 部署需人工；見 [slack-channel-taxonomy.md](slack-channel-taxonomy.md) |
+| 無法 rename `#42-knowledge-desicions` | 需 Slack UI 修正拼字 |
 
 ## 常見混淆
 
@@ -59,6 +73,12 @@ Slack MCP **沒有** `admin.apps.list`：
 1. `slack_list_channel_members` + `include_bots: true`（僅已在頻道內的 bot）
 2. `slack_search_public` + `include_bots: true`（從系統訊息反查，如 Claude 加入頻道）
 3. Workspace **設定 → 管理應用程式** 手動補登至 [agent-roster.md](agent-roster.md)
+
+## 相關文件
+
+- [slack-channel-taxonomy.md](slack-channel-taxonomy.md) — 頻道分層與 ID
+- [slack-handoff-template.md](slack-handoff-template.md) — 可複製模板
+- [.cursor/skills/slack-orchestrator/SKILL.md](../.cursor/skills/slack-orchestrator/SKILL.md) — Cursor skill
 
 ## 參考連結
 

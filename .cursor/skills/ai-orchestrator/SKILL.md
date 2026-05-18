@@ -64,7 +64,7 @@ description: >-
 
 勿同時 @ `@Cursor` 與 `<@U0B3VUN3QA1>` 做同一實作。
 
-## 文件索引（demo repo）
+## 文件索引
 
 | 路徑 | 用途 |
 |------|------|
@@ -72,8 +72,12 @@ description: >-
 | `docs/agent-handoff/COMPLETION-REPORT.md` | 完成回報格式 |
 | `docs/agent-handoff/TEST-RESULTS.md` | 實測紀錄 |
 | `docs/slack-bot-mention-tests.md` | @mention 實測 |
-| `docs/agent-roster.md` | user_id 與分派 |
+| `docs/agent-roster.md` | user_id、頻道 ID、分派 |
 | `docs/agent-contract.md` | 步驟契約 |
+| `docs/slack-channel-taxonomy.md` | devstream-core 頻道分層 |
+| `docs/slack-handoff-template.md` | 可複製 Slack 模板 |
+
+**Slack 工作區治理**（devstream-core）：見 skill [slack-orchestrator](../slack-orchestrator/SKILL.md)。
 
 ## 複製到新專案
 

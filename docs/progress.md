@@ -6,10 +6,10 @@
 
 | 欄位 | 值 |
 |------|-----|
-| **Phase** | **Demo 收尾** — handoff v3 + 寫入權限自測 |
-| **狀態** | **completed**（核心目標已達；Phase D 可選） |
+| **Phase** | **devstream-core Slack 治理** — charter 落地 |
+| **狀態** | **completed**（charter + Pin + rename + 遺留歸檔已復核；demo 頻道可選 archive） |
 | **Branch** | `main` |
-| **Slack 頻道** | `#ai-orchestrator-workflow-demo`（`C0B40L36REE`） |
+| **Slack workspace** | `devstream-core`（主頻道 `#00-general` `C09HE0CEA49`） |
 | **最後更新** | 2026-05-18 |
 
 ## 里程碑
@@ -22,6 +22,10 @@
 - [x] Slack bot @mention 實測 v2 → `docs/slack-bot-mention-tests.md`
 - [x] Handoff v3 協定驗證 → `docs/agent-handoff/TEST-RESULTS.md`；issues #6/#7/#9 已關
 - [x] GitHub 寫入自測（PR #10、#11）；PR #3 已關（Copilot 早期實驗）
+- [x] devstream-core 頻道稽核 → `docs/slack-channel-taxonomy.md`
+- [x] Slack charter 訊息已發（13 頻道）；`docs/agent-roster.md` 已更新
+- [x] 人工：Pin charter、Rename `#42-knowledge-decisions`、Archive `#proj-ai-demo` / `#ai-demo`（2026-05-18 復核）
+- [ ] 可選：Archive `#proj-ai-orchestrator-workflow-demo`（目前已 rename，仍 active）
 
 ## Demo 結論（給下一專案）
 

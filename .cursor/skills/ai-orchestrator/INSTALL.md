@@ -6,6 +6,8 @@
 
    ```bash
    cp -R .cursor/skills/ai-orchestrator /path/to/your-project/.cursor/skills/
+   # 可選：Slack 工作區治理（頻道分層、charter）
+   cp -R .cursor/skills/slack-orchestrator /path/to/your-project/.cursor/skills/
    ```
 
 2. 可選：複製並改寫規則
@@ -32,8 +34,9 @@ Agent 在任一 workspace 皆可被觸發（description 關鍵字：orchestrator
 
 | 內容 | 位置 |
 |------|------|
-| 可攜帶 skill（精簡流程） | `.cursor/skills/ai-orchestrator/` |
-| 專案實例（真實 channel_id） | `docs/agent-roster.md` 等 |
+| 可攜帶 skill（編排 + handoff） | `.cursor/skills/ai-orchestrator/` |
+| 可攜帶 skill（Slack 治理） | `.cursor/skills/slack-orchestrator/` |
+| 專案實例（真實 channel_id） | `docs/agent-roster.md`、`docs/slack-channel-taxonomy.md` |
 | 自動套用的專案規則 | `.cursor/rules/orchestrator.mdc` |
 
 正式專案：**skill 負責怎麼做；docs 負責這個專案的參數。**

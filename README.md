@@ -15,7 +15,7 @@
 
 驗證從規劃（可經 ChatGPT）到 Slack 承接需求，再由 **Cursor** 建立 GitHub 工作項、更新進度並回報 thread 的流程。
 
-**狀態（2026-05-18）**：核心 demo 已完成。派工需人工確認；詳見 [TEST-RESULTS.md](docs/agent-handoff/TEST-RESULTS.md) 與 [progress.md](docs/progress.md)。
+**狀態（2026-05-18）**：核心 demo 已完成；**devstream-core** Slack 治理（頻道分層 + charter）已落地。詳見 [progress.md](docs/progress.md)、[slack-channel-taxonomy.md](docs/slack-channel-taxonomy.md)。
 
 ## 可行性結論（精簡）
 
@@ -36,10 +36,22 @@ Slack Workflow Builder **不等同** GitHub Actions：repo 內 YAML 是 **contra
 
 部分 Slack UI 功能 **無公開 API**（例如側邊欄頻道區段、列出全部已安裝 App、邀請 bot 進既有頻道）— 見 [docs/slack-capability-matrix.md](docs/slack-capability-matrix.md)。
 
-## Slack 頻道
+## Slack（devstream-core workspace）
 
-- `#ai-orchestrator-workflow-demo` — 專案專用（ID: `C0B40L36REE`）
-- 設定：執行 `@Cursor settings` 設 default repo 為本 repo（見 runbook）
+| 用途 | 頻道 | Channel ID |
+|------|------|------------|
+| 公告／導覽 | `#00-general` | `C09HE0CEA49` |
+| 旗艦產品 l12cv | `#10-proj-l12cv` | `C0B47UBS2HH` |
+| Claude 審閱 | `#20-agent-claude` | `C0B4HTXG5PE` |
+| Cursor Cloud | `#21-agent-cursor` | `C0B4E9W84LS` |
+| Codex 實作 | `#22-agent-codex` | `C0B4C7T1E94` |
+| GitHub / Copilot | `#30-dev-github` | `C0B4ATV1WJH` |
+
+完整分層與訊息標籤：[docs/slack-channel-taxonomy.md](docs/slack-channel-taxonomy.md) · Handoff 模板：[docs/slack-handoff-template.md](docs/slack-handoff-template.md)
+
+**Demo 遺留**（可選 archive）：`#proj-ai-orchestrator-workflow-demo`（`C0B40L36REE`）— 新 handoff 請用 Layer 2/3 專線。
+
+設定：各 agent 頻道內 `@Cursor settings` / Codex environment / Claude repo 綁定；見 [runbook](.workflow-specs/slack-demo-request.md)。
 
 ## Repository Layout
 
@@ -54,13 +66,16 @@ docs/
   agent-contract.md
   agent-roster.md
   slack-capability-matrix.md
+  slack-channel-taxonomy.md
+  slack-handoff-template.md
   progress.md
   workflow-builder-checklist.md
   slack-bot-mention-tests.md
 
 .cursor/
   rules/orchestrator.mdc
-  skills/ai-orchestrator/     # 可複製至下一個 AI 專案的 Agent Skill
+  skills/ai-orchestrator/     # 編排 + handoff（可複製）
+  skills/slack-orchestrator/ # devstream-core Slack 治理與 charter
     SKILL.md
     INSTALL.md
     new-project-bootstrap.md
@@ -68,7 +83,7 @@ docs/
 
 ## 帶到下一個專案
 
-複製 [`.cursor/skills/ai-orchestrator/`](.cursor/skills/ai-orchestrator/) 至新 repo 的 `.cursor/skills/`，或至 `~/.cursor/skills/` 全域使用。詳見 [INSTALL.md](.cursor/skills/ai-orchestrator/INSTALL.md)。
+複製 [`.cursor/skills/ai-orchestrator/`](.cursor/skills/ai-orchestrator/)（必備）與可選 [`.cursor/skills/slack-orchestrator/`](.cursor/skills/slack-orchestrator/)（Slack 工作區治理）至新 repo。詳見 [INSTALL.md](.cursor/skills/ai-orchestrator/INSTALL.md)。
 
 ## 快速開始
 
