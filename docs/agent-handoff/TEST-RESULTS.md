@@ -7,6 +7,7 @@
 | T0 | [T0](https://devstream-core.slack.com/archives/C0B40L36REE/p1779069182447899) | 誤把 handoff-complete @Cursor → 日文 + PR#8（已關） |
 | **v3** | [v3](https://devstream-core.slack.com/archives/C0B40L36REE/p1779069759008549) | 見下；issue [#9](https://github.com/chang180/ai-orchestrator-workflow-demo/issues/9) **已關** |
 | **寫入權限** | — | PR [#10](https://github.com/chang180/ai-orchestrator-workflow-demo/pull/10)、[#11](https://github.com/chang180/ai-orchestrator-workflow-demo/pull/11) 已關；見下 |
+| **E2E v4** | [#11-proj thread](https://devstream-core.slack.com/archives/C0B40L36REE/p1779081856795149) | T1 Claude ✅；T2 Copilot [PR #13](https://github.com/chang180/ai-orchestrator-workflow-demo/pull/13)（Draft）；步驟化 @github 有效 |
 
 ## Demo 總結（2026-05-18 收尾）
 

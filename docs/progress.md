@@ -7,9 +7,10 @@
 | 欄位 | 值 |
 |------|-----|
 | **Phase** | **E2E v4** — `#11-proj` 頻道 live 編排 |
-| **狀態** | **in_progress**（T1 Claude 審閱 → T2 Copilot PR） |
+| **狀態** | **completed**（T1/T2 達標；PR [#13](https://github.com/chang180/ai-orchestrator-workflow-demo/pull/13) 為 Draft，可選合併） |
 | **Branch** | `test/e2e-v4-11-proj` |
-| **Issue** | [#12](https://github.com/chang180/ai-orchestrator-workflow-demo/issues/12) |
+| **Issue** | [#12](https://github.com/chang180/ai-orchestrator-workflow-demo/issues/12)（可關） |
+| **PR** | [#13](https://github.com/chang180/ai-orchestrator-workflow-demo/pull/13) → base `test/e2e-v4-11-proj` |
 | **Slack workspace** | `devstream-core` |
 | **本 repo 頻道** | `#11-proj-ai-orchestrator-workflow-demo`（`C0B40L36REE`） |
 | **最後更新** | 2026-05-18 |
@@ -41,7 +42,8 @@
 ### 2026-05-18（E2E v4 啟動）
 
 - Issue [#12](https://github.com/chang180/ai-orchestrator-workflow-demo/issues/12)；branch `test/e2e-v4-11-proj` 已 push。
-- Slack [E2E v4 thread](https://devstream-core.slack.com/archives/C0B40L36REE/p1779081856795149) → T1 ✅ `verdict=pass`；T2 已派 @github。
+- Slack [E2E v4 thread](https://devstream-core.slack.com/archives/C0B40L36REE/p1779081856795149) → T1 ✅ `verdict=pass`；T2 ✅ [PR #13](https://github.com/chang180/ai-orchestrator-workflow-demo/pull/13)（步驟化指派後 Copilot 有執行）。
+- 教訓：@github 需編號步驟 + 單一檔案；`notes` 寫「請通知 Cursor IDE」利於收尾。
 
 ### 2026-05-18（收尾）
 
