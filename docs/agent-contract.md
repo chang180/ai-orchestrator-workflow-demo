@@ -71,12 +71,19 @@ Slack 內**只有一個** GitHub bot；整合與 Copilot coding agent 共用此 
 編排者（Cursor IDE）在 **push 前** 完成：
 
 1. `git checkout -b feature/...`（或 `test/...`）
-2. 撰寫 `docs/agent-handoff/HANDOFF.md` 與 `docs/agent-handoff/tasks/TASK-<executor>.md`
+2. 撰寫 `docs/agent-handoff/HANDOFF-v2.md` 與 `docs/agent-handoff/tasks/v2/TASK-<executor>.md`
 3. `git push -u origin <branch>`
-4. Slack **每 bot 一則**，含 `branch=`、任務檔 **GitHub blob URL**、交付路徑、是否開 PR
+4. Slack **每 bot 一則**，含 `branch=`、任務檔 **GitHub blob URL**、交付路徑
 
-**Worktree**（`.worktrees/<name>`）僅供編排者本機並行；**勿**在 Slack 寫本機路徑給 Codex／Cloud／Copilot。  
-實驗見 [agent-handoff/README.md](agent-handoff/README.md)、branch `test/agent-handoff-delegation`。
+**v2 交付契約**（可複審）：
+
+| Agent | 交付 |
+|-------|------|
+| Codex / @Cursor / @github | **PR** → 實驗 branch + `artifacts/v2/*-deliverable.md`（`status: ready_for_review`） |
+| Claude | **Slack** 結構化審閱（`verdict:`），不要求 commit |
+
+編排者複審：[agent-handoff/ORCHESTRATOR-REVIEW.md](agent-handoff/ORCHESTRATOR-REVIEW.md)。  
+**Worktree** 僅編排者本機用；勿在 Slack 寫本機路徑。
 
 ## `slack.thread.message` 規則（notify_handoff）
 
