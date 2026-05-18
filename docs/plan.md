@@ -44,7 +44,8 @@
 ### 合併與收尾（建議）
 
 - [x] 開 PR：`feature/bootstrap-orchestrator` → `main`（[#2](https://github.com/chang180/ai-orchestrator-workflow-demo/pull/2)）
-- [ ] 合併後關閉 issue #1
+- [x] 合併後關閉 issue #1
+- [x] Handoff v3 驗證收尾；issues #6/#7/#9 已關（見 [agent-handoff/TEST-RESULTS.md](agent-handoff/TEST-RESULTS.md)）
 
 ### Phase F — Cursor Agent Skill（可攜帶至下一專案）
 

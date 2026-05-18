@@ -15,6 +15,8 @@
 
 驗證從規劃（可經 ChatGPT）到 Slack 承接需求，再由 **Cursor** 建立 GitHub 工作項、更新進度並回報 thread 的流程。
 
+**狀態（2026-05-18）**：核心 demo 已完成。派工需人工確認；詳見 [TEST-RESULTS.md](docs/agent-handoff/TEST-RESULTS.md) 與 [progress.md](docs/progress.md)。
+
 ## 可行性結論（精簡）
 
 - **可行**：Cursor IDE 編排 → push 任務文件 → Slack handoff → **PR / Slack 審閱** → `handoff-complete` → 複審（見 [PROTOCOL-v3](docs/agent-handoff/PROTOCOL-v3.md)）。

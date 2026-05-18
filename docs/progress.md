@@ -6,39 +6,47 @@
 
 | 欄位 | 值 |
 |------|-----|
-| **Phase** | 文件更新 — bot 實測 v2 |
-| **狀態** | completed |
-| **Issue** | https://github.com/chang180/ai-orchestrator-workflow-demo/issues/1 |
-| **PR** | https://github.com/chang180/ai-orchestrator-workflow-demo/pull/2 |
-| **Branch** | `feature/bootstrap-orchestrator` |
-| **Slack thread** | https://devstream-core.slack.com/archives/C0B40L36REE/p1778838247636049 |
-| **最後更新** | 2026-05-15 |
+| **Phase** | **Demo 收尾** — handoff v3 + 寫入權限自測 |
+| **狀態** | **completed**（核心目標已達；Phase D 可選） |
+| **Branch** | `main` |
+| **Slack 頻道** | `#ai-orchestrator-workflow-demo`（`C0B40L36REE`） |
+| **最後更新** | 2026-05-18 |
 
 ## 里程碑
 
 - [x] Phase A：文件與 spec v0.2
-- [x] Phase B：bot invite、roster、@Cursor settings、Copilot 設定（使用者已完成）
-- [x] Phase C：E2E 演練
-- [ ] Phase D：Workflow Builder `/demo-project`（可選）
-- [x] Phase F：Agent Skill
-- [x] PR #2 合併至 `main`、關閉 issue #1
-- [x] Slack bot @mention 實測 v2（Claude/Codex 通過）→ `docs/slack-bot-mention-tests.md`
+- [x] Phase B：bot invite、roster、@Cursor settings、Copilot 設定
+- [x] Phase C：E2E 演練（issue #1 / PR #2）
+- [ ] Phase D：Workflow Builder `/demo-project`（**可選**，未做）
+- [x] Phase F：Agent Skill + PROTOCOL-v3 / handoff-protocol
+- [x] Slack bot @mention 實測 v2 → `docs/slack-bot-mention-tests.md`
+- [x] Handoff v3 協定驗證 → `docs/agent-handoff/TEST-RESULTS.md`；issues #6/#7/#9 已關
+- [x] GitHub 寫入自測（PR #10、#11）；PR #3 已關（Copilot 早期實驗）
+
+## Demo 結論（給下一專案）
+
+- **主控**：Cursor IDE + `gh`；Slack 派工需**人工確認**（預期）。
+- **可靠 executor**：`<@U0B3VUN3QA1>` Copilot 開 PR；Codex 常 `blocked` → IDE fallback。
+- **Claude**：Slack 審閱 + `handoff-complete`；push 需 PAT。
+- **勿**：把 `handoff-complete` 當任務 @Cursor（見 T0 / PR #8）。
 
 ## 日誌
 
-### 2026-05-18
+### 2026-05-18（收尾）
 
-- **Handoff v3 協定定稿**：`PROTOCOL-v3.md`、`TEST-RESULTS.md`、skill `handoff-protocol.md`；[Slack v3](https://devstream-core.slack.com/archives/C0B40L36REE/p1779069759008549)；issue [#9](https://github.com/chang180/ai-orchestrator-workflow-demo/issues/9)。Test C Claude ✅（handoff-complete 格式）；T0 PR#8 已關。
-- **Handoff v2**（進行中）：branch `test/agent-handoff-v2`；issue [#7](https://github.com/chang180/ai-orchestrator-workflow-demo/issues/7)。
-- **Handoff v1**：branch `test/agent-handoff-delegation`；issue #6；無 git 交付（已棄用「勿開 PR」策略）。
-- Bot 實測 v2：頻道設定後 Claude/Codex 回覆正確 repo；文件 `slack-bot-mention-tests.md`。
-- PR #4 已合併至 main（`docs/slack-bot-mention-tests.md`）。
+- 使用者 Slack 手動 @ 各 AI + repo 寫入測試；確認僅 IDE 可穩定主控。
+- PR [#10](https://github.com/chang180/ai-orchestrator-workflow-demo/pull/10)、[#11](https://github.com/chang180/ai-orchestrator-workflow-demo/pull/11) 關閉（token 驗證）。
+- PR [#3](https://github.com/chang180/ai-orchestrator-workflow-demo/pull/3) 關閉（Copilot badge 實驗，不合併）。
+- 關閉 issues [#6](https://github.com/chang180/ai-orchestrator-workflow-demo/issues/6)、[#7](https://github.com/chang180/ai-orchestrator-workflow-demo/issues/7)、[#9](https://github.com/chang180/ai-orchestrator-workflow-demo/issues/9)。
+- 更新 `TEST-RESULTS.md`、`progress.md`。
 
-### 2026-05-15（收尾）
+### 2026-05-18（handoff）
 
-- 使用者已完成：`@Cursor settings`、GitHub App login/default repo（Copilot 與 `/github` 共用）。
-- Cursor orchestrator：開 PR、Slack 頻道發布里程碑摘要。
+- **Handoff v3 協定定稿**：`PROTOCOL-v3.md`、skill `handoff-protocol.md`；[Slack v3](https://devstream-core.slack.com/archives/C0B40L36REE/p1779069759008549)。
+- **Handoff v2**：branch `test/agent-handoff-v2`；artifacts 未齊。
+- **Handoff v1**：branch `test/agent-handoff-delegation`；無 git 交付。
+- Bot 實測 v2；PR #4、#5 已合併。
 
-### 2026-05-15（初版）
+### 2026-05-15
 
-- 實施 Cursor 主控加強計畫；E2E issue #1；Phase F skill 產出。
+- Bootstrap E2E、PR #2、Phase F skill；`@Cursor settings`、GitHub App login。
