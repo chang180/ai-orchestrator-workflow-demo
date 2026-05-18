@@ -6,9 +6,22 @@
 
 | 名稱 | Slack | 用途 |
 |------|-------|------|
-| **Cursor 編排** | `<@U09H5GMRSEQ>`（@Cursor） | 收到完成訊號後由人在 IDE 開 Cursor 複審，或 Cloud 代為摘要 |
+| **Cursor Cloud** | `<@U09H5GMRSEQ>`（@Cursor） | **會啟動 Cloud Agent**（改 code、開 PR），不是只回一句 |
+| **Cursor IDE 編排** | 本機對話 | 人看到 Slack 後開 IDE，或用 MCP 讀 thread |
 
-> IDE 編排者不會自動常駐 Slack；**@Cursor = 喚醒通知 + 可選 Cloud 協助**，不是保證無人值守。
+> **實測 T0（2026-05-18）**：只貼 `handoff-complete task:T0` → Cloud Agent 以**日文**回 thread，並開 **PR #8** 改 `docs/progress.md`（非預期的 ping 測試）。
+
+### 避免誤觸發 Cloud Agent
+
+| 意圖 | 作法 |
+|------|------|
+| **只測 Slack 通路** | 不要 @Cursor；由人類貼格式即可 |
+| **要 Cloud 只回一句** | `@Cursor ack-only: 用繁體中文回覆「收到 T0」即可。不要開 PR、不要改檔。` |
+| **要 Cloud 幹活** | 明寫 `branch=`、任務檔 URL、**Reply in Traditional Chinese (zh-TW)** |
+
+### 語言
+
+Cloud Agent **未指定時可能用日文或英文**。Slack 指派請加：**`Reply in Traditional Chinese (zh-TW).`**
 
 ## 固定格式（複製貼上）
 
