@@ -49,7 +49,29 @@ notes: （可選，一句繁中）
 |-------|--------|
 | Codex / @github | 開好 PR 後，**同 thread** 貼上方格式並 `@Cursor` |
 | @Cursor Cloud（T2） | PR 就緒後貼 `handoff-complete`（**不要**再開新任務；僅回報） |
-| Claude（T4） | 審閱貼完後加一行：`<@U09H5GMRSEQ> handoff-complete task:T4 status:ready_for_review` |
+| Claude（review-only） | 先貼審閱 + `handoff-complete`（**勿**在同行 @Cursor 當 execute） |
+| Claude 喚醒通知（可選） | 完成回報**之後**另起一行 `ack-only` ping（見下） |
+
+### Claude 完成時通知編排（可選）
+
+Slack **沒有**「Claude 完成自動 @Cursor」的全域開關；請寫進 **任務文件** 或 Claude 頻道／專案指示。
+
+**安全做法**（喚醒通知，不觸發開 PR）：
+
+```text
+handoff-complete
+task: T1
+status: ready_for_review
+pr: n/a
+artifact: n/a
+notes: verdict=pass
+
+<@U09H5GMRSEQ> ack-only: 請以繁中回覆一句「T1 已完成，編排者可讀 thread。」Do NOT open PR. Do NOT modify any file.
+```
+
+**避免**：`<@U09H5GMRSEQ> handoff-complete task:T0` 單行 @Cursor → Cloud 會當成新任務開 PR（T0 實測）。
+
+**IDE 編排（本機 Cursor）**：不會自動訂閱 Slack；仍需你開 IDE、或定期 `slack_read_thread`，或由 Cloud `ack-only` 後你再轉述。
 
 ## 編排者收到後（IDE Cursor）
 

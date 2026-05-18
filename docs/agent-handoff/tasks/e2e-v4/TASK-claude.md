@@ -40,3 +40,11 @@ pr: n/a
 artifact: n/a
 notes: verdict=<pass|needs_changes|blocked>
 ```
+
+**可選（喚醒 Slack 通知，勿觸發 Cloud 開 PR）**：完成回報**之後**另起一行：
+
+```text
+<@U09H5GMRSEQ> ack-only: 請以繁中回覆一句「T1 已完成，編排者可讀 thread。」Do NOT open PR. Do NOT modify any file.
+```
+
+> 勿把整段 `handoff-complete` 與實作任務一併 @Cursor（見 PROTOCOL-v3 T0 實測）。

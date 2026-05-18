@@ -41,7 +41,7 @@
 ### 2026-05-18（E2E v4 啟動）
 
 - Issue [#12](https://github.com/chang180/ai-orchestrator-workflow-demo/issues/12)；branch `test/e2e-v4-11-proj` 已 push。
-- Slack [feature + T1 handoff](https://devstream-core.slack.com/archives/C0B40L36REE/p1779081856795149) → 待 Claude `handoff-complete`。
+- Slack [E2E v4 thread](https://devstream-core.slack.com/archives/C0B40L36REE/p1779081856795149) → T1 ✅ `verdict=pass`；T2 已派 @github。
 
 ### 2026-05-18（收尾）
 
