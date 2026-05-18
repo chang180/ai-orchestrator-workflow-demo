@@ -9,7 +9,7 @@
 | **Phase** | 收尾 — PR 合併 |
 | **狀態** | in_progress |
 | **Issue** | https://github.com/chang180/ai-orchestrator-workflow-demo/issues/1 |
-| **PR** | （建立後填入） |
+| **PR** | https://github.com/chang180/ai-orchestrator-workflow-demo/pull/2 |
 | **Branch** | `feature/bootstrap-orchestrator` |
 | **Slack thread** | https://devstream-core.slack.com/archives/C0B40L36REE/p1778838247636049 |
 | **最後更新** | 2026-05-15 |
@@ -21,7 +21,8 @@
 - [x] Phase C：E2E 演練
 - [ ] Phase D：Workflow Builder `/demo-project`（可選）
 - [x] Phase F：Agent Skill
-- [ ] PR 合併至 `main`、關閉 issue #1
+- [ ] PR #2 合併至 `main`、關閉 issue #1
+- [x] Slack 里程碑摘要已發布（見頻道最新訊息）
 
 ## 日誌
 

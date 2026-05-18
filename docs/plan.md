@@ -30,7 +30,7 @@
 
 - [x] 在 `#ai-orchestrator-workflow-demo` `/invite` 關鍵 bot（Claude、Cursor、Codex、GitHub）
 - [x] `docs/agent-roster.md` 清查與維護
-- [ ] `@Cursor settings` 設 default repo：`chang180/ai-orchestrator-workflow-demo`（**需你在 Slack 執行**）
+- [x] `@Cursor settings` 設 default repo：`chang180/ai-orchestrator-workflow-demo`
 - [ ] Cloud Agents routing：`orchestrator` / `workflow` → 本 repo（**需你在 Dashboard 設定**）
 
 ### Phase C — 端到端演練
@@ -43,7 +43,7 @@
 
 ### 合併與收尾（建議）
 
-- [ ] 開 PR：`feature/bootstrap-orchestrator` → `main`
+- [x] 開 PR：`feature/bootstrap-orchestrator` → `main`（[#2](https://github.com/chang180/ai-orchestrator-workflow-demo/pull/2)）
 - [ ] 合併後關閉 issue #1
 
 ### Phase F — Cursor Agent Skill（可攜帶至下一專案）
