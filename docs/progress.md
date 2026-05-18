@@ -6,13 +6,13 @@
 
 | 欄位 | 值 |
 |------|-----|
-| **Phase** | 文件更新 — bot 實測 v2 |
-| **狀態** | completed |
-| **Issue** | https://github.com/chang180/ai-orchestrator-workflow-demo/issues/1 |
-| **PR** | https://github.com/chang180/ai-orchestrator-workflow-demo/pull/2 |
-| **Branch** | `feature/bootstrap-orchestrator` |
+| **Phase** | Handoff v2 複審 — T0 信號已收 |
+| **狀態** | in_progress |
+| **Issue** | https://github.com/chang180/ai-orchestrator-workflow-demo/issues/7 |
+| **PR** | n/a（T0 無 PR） |
+| **Branch** | `test/agent-handoff-v2` |
 | **Slack thread** | https://devstream-core.slack.com/archives/C0B40L36REE/p1778838247636049 |
-| **最後更新** | 2026-05-15 |
+| **最後更新** | 2026-05-18 |
 
 ## 里程碑
 
@@ -28,6 +28,7 @@
 
 ### 2026-05-18
 
+- **Handoff v2 T0 複審**（完成）：收到 `handoff-complete task:T0 status:ready_for_review pr:n/a`。T0 不在標準任務列表（T1–T4）內，推測為 Slack thread 額外定義的預備任務或測試訊號；已記錄並更新 progress.md。詳見 issue [#7](https://github.com/chang180/ai-orchestrator-workflow-demo/issues/7) 複審留言。
 - **Handoff v2**（進行中）：branch `test/agent-handoff-v2`；issue [#7](https://github.com/chang180/ai-orchestrator-workflow-demo/issues/7)；[Slack](https://devstream-core.slack.com/archives/C0B40L36REE/p1779068753832629)。T1–T3 要求 **PR**；T4 Claude **Slack 審閱**。複審手冊：`docs/agent-handoff/ORCHESTRATOR-REVIEW.md`。
 - **Handoff v1**：branch `test/agent-handoff-delegation`；issue #6；無 git 交付（已棄用「勿開 PR」策略）。
 - Bot 實測 v2：頻道設定後 Claude/Codex 回覆正確 repo；文件 `slack-bot-mention-tests.md`。
