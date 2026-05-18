@@ -15,6 +15,12 @@
 
 驗證從規劃（可經 ChatGPT）到 Slack 承接需求，再由 **Cursor** 建立 GitHub 工作項、更新進度並回報 thread 的流程。
 
+## 可行性結論（精簡）
+
+- **可行**：Cursor 編排 → GitHub branch + 任務文件 → Slack 分別 @ 各 executor（見 [docs/agent-handoff/](docs/agent-handoff/)）。
+- **不可行**：Slack 一 @ 多 agent 自動協作；把本機 worktree 路徑交給雲端 bot。
+- **主控**：仍為 Cursor IDE + `gh`；其他 bot 為 handoff 專才。
+
 ## Important Finding
 
 Slack Workflow Builder **不等同** GitHub Actions：repo 內 YAML 是 **contract**，不會被 Slack 自動掃描部署。

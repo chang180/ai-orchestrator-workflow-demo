@@ -66,6 +66,18 @@ Slack 內**只有一個** GitHub bot；整合與 Copilot coding agent 共用此 
 | `update_progress` | `github.file.update` | cursor | `path: docs/progress.md` | commit |
 | `setup_workflow_shortcut` | `slack.workflow.builder` | manual | runbook | Slack workflow ID |
 
+## Branch + 任務文件 handoff（建議模式）
+
+編排者（Cursor IDE）在 **push 前** 完成：
+
+1. `git checkout -b feature/...`（或 `test/...`）
+2. 撰寫 `docs/agent-handoff/HANDOFF.md` 與 `docs/agent-handoff/tasks/TASK-<executor>.md`
+3. `git push -u origin <branch>`
+4. Slack **每 bot 一則**，含 `branch=`、任務檔 **GitHub blob URL**、交付路徑、是否開 PR
+
+**Worktree**（`.worktrees/<name>`）僅供編排者本機並行；**勿**在 Slack 寫本機路徑給 Codex／Cloud／Copilot。  
+實驗見 [agent-handoff/README.md](agent-handoff/README.md)、branch `test/agent-handoff-delegation`。
+
 ## `slack.thread.message` 規則（notify_handoff）
 
 **不是** sub-agent 自動執行佇列。Slack 只轉發 `app_mention` 給被 @ 的 App；各 bot 依**自家產品邏輯**回應。實測見 [slack-bot-mention-tests.md](slack-bot-mention-tests.md)。

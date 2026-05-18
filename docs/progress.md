@@ -28,6 +28,7 @@
 
 ### 2026-05-18
 
+- **Handoff 實驗**：branch `test/agent-handoff-delegation` + `docs/agent-handoff/`；issue #6；Slack 已發三則 @ 分派（待觀察 artifacts）。
 - Bot 實測 v2：頻道設定後 Claude/Codex 回覆正確 repo；文件 `slack-bot-mention-tests.md`。
 - PR #4 已合併至 main（`docs/slack-bot-mention-tests.md`）。
 
