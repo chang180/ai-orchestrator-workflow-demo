@@ -6,8 +6,8 @@
 
 | 欄位 | 值 |
 |------|-----|
-| **Phase** | 收尾 — PR 合併 |
-| **狀態** | in_progress |
+| **Phase** | 文件更新 — bot 實測 v2 |
+| **狀態** | completed |
 | **Issue** | https://github.com/chang180/ai-orchestrator-workflow-demo/issues/1 |
 | **PR** | https://github.com/chang180/ai-orchestrator-workflow-demo/pull/2 |
 | **Branch** | `feature/bootstrap-orchestrator` |
@@ -21,10 +21,15 @@
 - [x] Phase C：E2E 演練
 - [ ] Phase D：Workflow Builder `/demo-project`（可選）
 - [x] Phase F：Agent Skill
-- [ ] PR #2 合併至 `main`、關閉 issue #1
-- [x] Slack 里程碑摘要已發布（見頻道最新訊息）
+- [x] PR #2 合併至 `main`、關閉 issue #1
+- [x] Slack bot @mention 實測 v2（Claude/Codex 通過）→ `docs/slack-bot-mention-tests.md`
 
 ## 日誌
+
+### 2026-05-18
+
+- Bot 實測 v2：頻道設定後 Claude/Codex 回覆正確 repo；文件 `slack-bot-mention-tests.md`。
+- PR 文件更新待合併。
 
 ### 2026-05-15（收尾）
 

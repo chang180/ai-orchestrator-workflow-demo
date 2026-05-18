@@ -65,6 +65,7 @@
 - [architecture.md](architecture.md) — 架構與資料流
 - [agent-contract.md](agent-contract.md) — 執行契約
 - [slack-capability-matrix.md](slack-capability-matrix.md) — API 能力邊界
+- [slack-bot-mention-tests.md](slack-bot-mention-tests.md) — @mention 實測 v1/v2
 - [agent-roster.md](agent-roster.md) — Bot 與 mention 清單
 - [progress.md](progress.md) — 執行進度
 - [../.workflow-specs/slack-demo-request.md](../.workflow-specs/slack-demo-request.md) — 操作 runbook

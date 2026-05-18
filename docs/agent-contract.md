@@ -59,16 +59,19 @@
 | `intake` | `slack.thread.read` | cursor | `channel_id`, `thread_ts` | 需求摘要 |
 | `create_issue` | `github.issue.create` | cursor | `title`, `body` | issue URL |
 | `create_branch` | `github.branch.create` | cursor | `branch_name` | branch ref |
-| `notify_agents` | `slack.thread.message` | cursor | `mentions_from: agent-roster` | thread 訊息 |
+| `notify_agents` | `slack.thread.message`（**notify_handoff**） | cursor | `mentions_from: agent-roster` | thread 訊息 |
 | `update_progress` | `github.file.update` | cursor | `path: docs/progress.md` | commit |
 | `setup_workflow_shortcut` | `slack.workflow.builder` | manual | runbook | Slack workflow ID |
 
-## `slack.thread.message` 規則
+## `slack.thread.message` 規則（notify_handoff）
+
+**不是** sub-agent 自動執行佇列。Slack 只轉發 `app_mention` 給被 @ 的 App；各 bot 依**自家產品邏輯**回應。實測見 [slack-bot-mention-tests.md](slack-bot-mention-tests.md)。
 
 1. 從 [agent-roster.md](agent-roster.md) 解析 `mention` 與 `role`。
-2. 僅 mention `channel_status: joined` 的 bot；否則在 thread 註明需 `/invite`。
-3. 預設分派：Claude、Codex、`<@U0B3VUN3QA1>`（GitHub 整合）；**GitHub Copilot** 僅在 `on_demand` 時加 `@GitHub Copilot`。
-4. 訊息需含：issue 連結、branch 名、下一步、各 role 負責項；若已委派 Copilot，註明 prompt 摘要與預期 PR repo。
+2. 僅 mention `channel_status: joined` 的 bot；頻道內 **Claude/Codex/Copilot 須先完成 App 頻道綁 repo**（人工設定）。
+3. 使用 [slack-bot-mention-tests.md](slack-bot-mention-tests.md) 的 **invoke 模板**，勿只寫「請 Claude 審閱」。
+4. 預設 handoff：Claude、Codex、`<@U0B3VUN3QA1>`；**GitHub Copilot** 僅 `on_demand`。
+5. 訊息需含：issue 連結、branch 名、下一步；Codex 可能仍會附帶開 task。
 
 範例：
 

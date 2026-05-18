@@ -57,7 +57,8 @@ description: >-
 
 ## 能力邊界與陷阱
 
-Slack / GitHub / Cursor 分工表見 [reference-slack-limits.md](reference-slack-limits.md)。
+Slack / GitHub / Cursor 分工表見 [reference-slack-limits.md](reference-slack-limits.md)。  
+@mention 實測與 invoke 模板：專案內見 `docs/slack-bot-mention-tests.md`。
 
 ## 本 repo 對照文件
 
