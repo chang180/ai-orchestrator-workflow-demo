@@ -3,7 +3,8 @@
 **編排者**：Cursor IDE Agent  
 **Repo**：`chang180/ai-orchestrator-workflow-demo`  
 **Branch**：`test/agent-handoff-delegation`  
-**Issue**：（建立後補連結）
+**Issue**：https://github.com/chang180/ai-orchestrator-workflow-demo/issues/6  
+**Slack**：https://devstream-core.slack.com/archives/C0B40L36REE/p1779068230291279
 
 ## 目標
 
