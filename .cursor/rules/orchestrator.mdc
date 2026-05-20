@@ -1,45 +1,38 @@
 ---
-description: Cursor 作為本 repo 的 AI orchestrator 時的編排規則（demo 實例；可由 ai-orchestrator skill bootstrap 重建）
+description: Cursor 作為本 repo 的 AI orchestrator 時的編排規則（demo 實例 · v4 local-first）
 globs:
   - "**/*"
 alwaysApply: true
 ---
 
-# Orchestrator Rules
+# Orchestrator Rules（v4 local-first）
 
-本專案中 **Cursor IDE 為主 orchestrator**；Slack 的 `@Cursor` 為 **Cloud Agent**（另一條執行路徑）。
+本專案 **Cursor IDE 為唯一主編排者**。本頻道為 **demo 唯讀博物館**；活躍專案請用各產品 `#10-proj-*`。
 
-## Handoff（v3）
+## Workflow v4
 
-1. 建 branch + `docs/agent-handoff/tasks/*` → **git push 後**再 Slack。
-2. 指派用 **execute 模板**（見 `docs/agent-handoff/PROTOCOL-v3.md`、skill `handoff-protocol.md`）。
-3. 每則 Slack 加 **`Reply in Traditional Chinese (zh-TW).`**
-4. **禁止**把 `handoff-complete …` **@Cursor** 當工作單（會開 PR）；Ping 用 `ack-only`。
-5. 收工：`slack_read_thread` 搜 `handoff-complete` → `gh pr diff` → 複審。
+1. 任務：`docs/tasks/T-*.md`；進度：`docs/progress.md` → **git push**。
+2. **本機**執行；預設 Slack **不** `[handoff]` @ bot。
+3. 可選 `[status]` 鏡像；skills 原始碼在 `.cursor/skills/`。
 
 ## 執行優先順序
 
-1. Slack MCP 讀需求。
-2. `gh` 更新 issue / branch / `docs/progress.md`。
-3. Slack 回報 + 依 roster handoff。
-4. `include_bots: true` 掃成員。
+1. 讀 `docs/WORKFLOW-v4.md`、`docs/progress.md`。
+2. `gh` 更新 issue / branch / PR / progress。
+3. 本機實作；可選 Slack `[status]`（無 mention）。
 
 ## 禁止假設
 
-- Workflow YAML 自動部署 Slack。
-- MCP 邀請 bot、管理頻道區段、列出全部 App。
-- 其他 AI 會自動排隊執行編排指令。
-- Contributors 出現「Claude/Codex」帳號（實為你的帳號或 bot）。
+- Slack execute 自動排隊、YAML 自動部署、MCP `/invite`。
+- 其他專案複製 demo `docs/`（只 copy skills + bootstrap）。
 
 ## 契約檔
 
-- `docs/agent-contract.md`
-- `docs/agent-handoff/PROTOCOL-v3.md`
-- `docs/slack-capability-matrix.md`
-- `docs/slack-channel-taxonomy.md`（devstream-core 頻道）
-- `docs/slack-handoff-template.md`
+- `docs/WORKFLOW-v4.md`
+- `docs/progress.md`
+- `.cursor/skills/ai-orchestrator/`
 
-## Slack workspace（devstream-core）
+## 本專案 Slack（demo）
 
-- **本 repo**：`#11-proj-ai-orchestrator-workflow-demo`（`C0B40L36REE`）· l12cv：`#10-proj-l12cv` · Agent 專線：`#20-agent-*`
-- Skill：`.cursor/skills/slack-orchestrator/`
+- **頻道**：`#11-proj-ai-orchestrator-workflow-demo`（`C0B40L36REE`）— 唯讀封存
+- **Repo**：`chang180/ai-orchestrator-workflow-demo`

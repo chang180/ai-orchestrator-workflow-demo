@@ -20,9 +20,9 @@
 |------|------------|--------|------|
 | `#00-general` | `C09HE0CEA49` | — | **keep** — charter 已發（2026-05-18） |
 | `#00-social` | `C09HE0CH4L9` | 1 | **keep** |
-| `#11-proj-ai-orchestrator-workflow-demo` | `C0B40L36REE` | 5 | **keep** — 本 repo（`ai-orchestrator-workflow-demo`）E2E 實驗 |
-| `#10-proj-l12cv` | `C0B47UBS2HH` | 1 | **keep** — 旗艦產品 l12cv |
-| `#20-agent-claude` | `C0B4HTXG5PE` | 2 | **keep** — @claude 已加入 |
+| `#11-proj-ai-orchestrator-workflow-demo` | `C0B40L36REE` | 5 | **keep** — 本 repo skills demo；**v4 唯讀**，`[status]` only |
+| `#10-proj-l12cv` | `C0B47UBS2HH` | 1 | **keep** — 旗艦產品 l12cv；**v4 進度看板**（實戰） |
+| `#20-agent-claude` | `C0B4HTXG5PE` | 2 | **keep** — v4 **預設閒置** |
 | `#21-agent-cursor` | `C0B4E9W84LS` | 2 | **keep** — @cursor 已加入 |
 | `#22-agent-codex` | `C0B4C7T1E94` | 3 | **keep** — @codex + @cursor |
 | `#30-dev-github` | `C0B4ATV1WJH` | 2 | **keep** — @github 已加入 |
@@ -93,6 +93,7 @@ Tradeoff: （取捨）
 
 | 日期 | 變更 |
 |------|------|
+| 2026-05-20 | v4：L1=進度看板 `[status]`；L2 agent 預設閒置 |
 | 2026-05-18 | 初版：devstream-core 全頻道稽核 |
 | 2026-05-18 | 修正 `#00-general` ID；Slack charter 訊息已發 |
 | 2026-05-18 | 復核：rename / Pin / 遺留歸檔完成 |

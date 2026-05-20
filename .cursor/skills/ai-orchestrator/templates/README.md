@@ -1,6 +1,8 @@
-# Templates
+# Templates（v4 · manifest 2.0.0）
 
-由 [bootstrap.md](../bootstrap.md) 讀取 [manifest.json](manifest.json)，替換 `{{...}}` 後寫入目標 repo。
+由 [bootstrap.md](../bootstrap.md) 讀取 [manifest.json](manifest.json)（`workflow: v4-local-first`），替換 `{{...}}` 後寫入目標 repo。
+
+**主協定模板**：`docs/WORKFLOW-v4-LOCAL-FIRST.md.tpl` → `docs/WORKFLOW-v4.md`
 
 | 佔位符 | 說明 |
 |--------|------|
